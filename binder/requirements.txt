@@ -2,6 +2,12 @@
 jupytext
 jupyter-server-proxy
 
+#Simulator package requirements
+numpy #jyro
+pandas #useful for plotting demos
+plotly #useful for plotting demos
+cufflinks # useful for pandas plotting demos using plotly
+
 #Robot simulator demos
 ipyturtle
 jyro
