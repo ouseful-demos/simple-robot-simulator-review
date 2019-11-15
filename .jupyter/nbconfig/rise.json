@@ -1,0 +1,6 @@
+{
+    "autolaunch": true,
+    "enable_chalkboard": true,
+    "scroll": true, 
+    "header": "<img src = '../images/ou-open-university-50-years.png' align='right' />"
+}
