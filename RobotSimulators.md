@@ -307,7 +307,7 @@ Try out a [live demo here](https://www.aposteriori.com.sg/Ev3devSim/index.html).
 
 The application can also be run within MyBinder proxied via `jupyer-server-proxy` __[demo to follow...]__.
 
-
+Colour, gyro and ultrasonic sensors are available, with two colour sensors mounted by default at the front of the simualted robot. The motors are either independently controlled or ganged (*moveTank*, *moveSteering*) and are either running at a specified percentage level or they are stopped. When motors are turned off, the robot stops instantly.
 
 __Advantages__:
 
