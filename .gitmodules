@@ -1,0 +1,3 @@
+[submodule "ev3dev-sim"]
+	path = ev3dev-sim
+	url = https://github.com/ouseful-PR/ev3dev-sim
