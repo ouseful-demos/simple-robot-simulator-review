@@ -4,7 +4,7 @@ Notes on the availability of robot simulators that might be appropriate for revi
 
 A key consideration are the learning objectives surrounding that we require the practical activities to meet. 
 
-Currently (up to and including 19J), TM129 Robotics block practical activities cover teaching elemetary programming in the context of a simple 2D simulator, and training a simple neural network via an application with a graphical user interface.
+Currently (up to and including 19J), TM129 Robotics block practical activities cover teaching elementary programming in the context of a simple 2D simulator, and training a simple neural network via an application with a graphical user interface.
 
 More generally, learning objectives for the update might include, but not be limited to:
 
@@ -28,13 +28,13 @@ This would allow OU educators and developers to gain familiarity in use of the s
 
 ## Deployment Concerns
 
-Making software applications available to OU students, who work at a distance on a computers outside of our control, is often challenging.
+Making software applications available to OU students, who work at a distance on computers outside of our control, is often challenging.
 
 The OU policy is that students should have a minimum specification computer (which is set at a very low spacification) and minimum version operating system (which may be very old, and even past its support date) although which operating system is left open; students could use Windows, Mac O/S, Linux, so cross-platform support is required.
 
 The computer specification does not admit of tablets, phones or netbooks/Chromebooks, although increasingly these may be the only computer the student has access to (in particular, netbooks/Chromebooks).
 
-Selecting software that runs an HTML over HTTP user interface means that the student only requires a web browser to run software, although some clients may specify particular browsers (such as a recent version of Chrome or Firefox). Desktop applications without an HTML UI can also be accessed via a browser using no-vnc or XPRA clients, or via cross-platform RDP clients.
+Selecting software that runs an HTML over HTTP user interface means that the student only requires a web browser to run software, although some clients may specify particular browsers (such as a recent version of Chrome or Firefox). Desktop applications without an HTML UI can also be accessed via a browser using no-vnc or XPRA web-browser clients, or via cross-platform RDP clients.
 
 Cross-platform support can conveniently be provided using virtualised applications (OU modules have distributed software to students using both VirtualBox virtual machines and Docker containers) to allow offline running of module software and local file persistence. This has the advantage that the same application software and software environment is provided to all students.
 
@@ -42,7 +42,7 @@ Some robot simulators are resource intensive, requiring large amounts of memory,
 
 Virtualised environments can be made available to students remotely as well as locally on their own machine (the *same* environment applying inseide the VM in each case). Whilst this does require students to have an internet connection to the remote application server, their computer only needs to support an internet browser (which means activities could also be completed using netbooks, tablets, or even phones). Challenges to the OU of providing remote access include managing multi-user access and authentication, student personal file persistence and peak load resource provisioning.
 
-TM112 has recently experimented with hosting a scaleable multi-user JupyterHub service accessed via a VLE module website to deliver a temporary Jupyter notebook activity to students. Students can run activities during a single online session but not save those activities to return to them later. It is quite possible to configure the JupyterHub server to provide persistent student accounts, although this requires additional storage resource. JupyterHub serves a potentially user-selectable container instance to a connected user via a scaleable Kubernetes backend. As well as running a Jupyter notebook server UI, the notebook server can proxy other HTTP/HTML user interfaces (for example, running [RStudio via a proxy](https://github.com/jupyterhub/jupyter-rsession-proxy)), including remote desktops exposed via no-vnc (for example, [`jupyter-desktop`](https://github.com/yuvipanda/jupyter-desktop)). JupyterHub can thus be used to provide authenticated multi-user access to arbitrary, personal, containerised applications other than Jupyter notebooks, albeit proxied by the personal notebook server running in the container.
+TM112 has recently experimented with hosting a scaleable multi-user JupyterHub service accessed via a VLE module website to deliver a temporary Jupyter notebook activity to students. Students can run activities during a single online session but not save those activities to return to them later. It is quite possible to configure the JupyterHub server to provide persistent student accounts, although this requires additional storage resource. [Currently, there is no precedent for this mode of operation within the OU although many other institutions do offer this sort of personalised service.] The TM112 JupyterHub service serves a potentially user-selectable container instance to a connected user via a scaleable Kubernetes backend. As well as running a Jupyter notebook server UI, the notebook server can proxy other HTTP/HTML user interfaces (for example, running [RStudio via a proxy](https://github.com/jupyterhub/jupyter-rsession-proxy)), including remote desktops exposed via no-vnc (for example, [`jupyter-desktop`](https://github.com/yuvipanda/jupyter-desktop)). JupyterHub can thus be used to provide authenticated multi-user access to arbitrary, personal, containerised applications other than Jupyter notebooks, albeit proxied by the personal notebook server running in the container.
 
 
 ## TM129 Practicals, <= 19J
@@ -81,9 +81,9 @@ Note that when considering environments, we require three components:
 
 In some cases, the same application may meet *all three* requirements in a tightly coupled / integrated way. In others, it may be possible to decouple the programming environment and language from the simulation environment, or loosely embed a simulation environment within the context of the programming environment.
 
-If the module revisions extentds to practical activities that include programming conversational agents, it would be useful same programing environment 
+If the module revisions extends to practical activities that include programming conversational agents, it would be useful same programing environment could be used to programme the robot simulator as well as the conversational agents.
 
-## Software Applications - General Criteria
+## Software Applications - General Criteria
 
 The simulators and development environments were identified on the basis of web searches for applications that meet one or more of the following criteria:
 
@@ -153,6 +153,8 @@ An OU fork of the blockly style *Scratch* environment (*OU Build*) is already be
 __Advantages:__ simple 2D simulator has much of the feel of RobotLearn; converting current RobotLab activities to Open Roberta Lab activities should in large part be possible; browser based; more senosrs available for use in simulator than RobotLab.
 
 __Disadvantages__: accessibility may be an issue; blocks editor does not allow text-based programming / editing, although inpsection of autmoatically generated equivalent code is possible.
+
+TO DO - mention of the other dev boards Open Roberta Lab supports
 
 __Key Considerations__: cross-platform local delivery possible via Docker container;
 
@@ -311,7 +313,7 @@ __Advantages__:
 
 __Disadvantages__:
 
-__To explore__: the developers of another blockly style environment, *BlockPy*, are currently developing an editor, [*BlockMirror*](https://github.com/blockpy-edu/BlockMirror) that provides *"[a]n interface for dual block/text representation with Blockly"*. The *BlockMirror* editor embeds the *Skulpt* parser (as does *Ev3devSim*) and allows the user to toggle between block and code views: editing one view is reflected by changes to the other. I wonder how easy it would be to use *BlockMirror* as the editor within *Ev3devSim*? (I have filed an [issue](https://github.com/QuirkyCort/ev3dev-sim/issues/3) to the original `ev3dev-sim` repo related to this.) It should be easy enough to package * Ev3devSim* for cross-platform use as an electron application.
+__To explore__: the developers of another blockly style environment, *BlockPy*, are currently developing an editor, [*BlockMirror*](https://github.com/blockpy-edu/BlockMirror) that provides *"[a]n interface for dual block/text representation with Blockly"*. The *BlockMirror* editor embeds the *Skulpt* parser (as does *Ev3devSim*) and allows the user to toggle between block and code views: editing one view is reflected by changes to the other. I wonder how easy it would be to use *BlockMirror* as the editor within *Ev3devSim*? (I have filed an [issue](https://github.com/QuirkyCort/ev3dev-sim/issues/3) to the original `ev3dev-sim` repo related to this.) It should be easy enough to package *Ev3devSim* for cross-platform use as an electron application.
 
 
 
@@ -345,7 +347,7 @@ THe VREP simulator can be instrumented within a world scene, or via code. Real t
 
 ![VREP telementry view](images/vrep-graph.png)
 
-Telemetry data can also be captured into a Jupyter notebook used to control the simulator and and robot operatig within it.
+Telemetry data can also be captured into a Jupyter notebook used to control the simulator and and robot operating within it.
 
 ![Viewing VREP telemetry data in a Jupyer notebook](images/demo_-_vrep_magic2.png)
 
@@ -353,7 +355,7 @@ Further context is available in a series of blog posts produced at the time, for
 
 __Advantages__: VREP is a fully featured simulator offering a wide range of robot models. A Python API, as well as a ROS interface, are available.
 
-__Disadvantages__: VREP can be resource hungry and the installation path can be tricky, particular if the programming environment needs to be interfaced with it; this can be simplified by distributing the whole environment via a virtual machine, although performance of the vitualised simulator compared to running it as a native host desktop application may be impaired. [I don't remember if I tried to run it on a powerful server access via RDP? If using RDP, the notebook server could be accessed via a browser installed on the virtual desktop, or as a headless service exposed via another http port.
+__Disadvantages__: VREP can be resource hungry and the installation path can be tricky, particular if the programming environment needs to be interfaced with it; this can be simplified by distributing the whole environment via a virtual machine, although performance of the vitualised simulator compared to running it as a native host desktop application may be impaired. [I don't remember if I tried to run it on a powerful server access via RDP? If using RDP, the notebook server could be accessed via a browser installed on the virtual desktop, or as a headless service exposed via another http port.]
 
 ### ROS
 
