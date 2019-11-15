@@ -5,4 +5,4 @@
 
 This repository contains review materials and various examples of simple robot simulators used to support the selection of a new robot simulator for an update to the introductory robotics block of the Open University TM112 during the period 2019-20.
 
-If you have know of any simple robot simulators that may be appropriate for an intorductorty robotics and robot programming course that are not currently reviewed, please let us know via the repository issues, or via a pull request.
+If you have know of any simple robot simulators that may be appropriate for an introductory robotics and robot programming course that are not currently reviewed, please let us know via the repository issues, or via a pull request.
