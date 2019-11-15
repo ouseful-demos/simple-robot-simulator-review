@@ -1,0 +1,22 @@
+mkdir -p $HOME/.local/bin
+
+PROCESSING_VERSION=processing-3.5.3
+PROCESSING_FILE=$PROCESSING_VERSION-linux64.tgz
+PROCESSING_URL=http://download.processing.org/$PROCESSING_FILE
+
+if [ ! -f "$PROCESSING_FILE" ]; then
+    echo "Getting $PROCESSING_URL"
+    wget -q $PROCESSING_URL
+fi
+
+
+tar -xf $PROCESSING_FILE
+rm $PROCESSING_FILE
+mv ./$PROCESSING_VERSION $HOME/.local/bin/processing
+
+python3 -m calysto_processing install --user
+
+#wget -q https://jupyter.brynmawr.edu/services/public/dblank/CS110%20Intro%20to%20Computing/2017-Spring/Lectures/Robot.pde
+#wget -q https://jupyter.brynmawr.edu/services/public/dblank/CS110%20Intro%20to%20Computing/2017-Spring/Lectures/Hit.pde
+#wget -q https://jupyter.brynmawr.edu/services/public/dblank/CS110%20Intro%20to%20Computing/2017-Spring/Lectures/Lectures/World.pde
+

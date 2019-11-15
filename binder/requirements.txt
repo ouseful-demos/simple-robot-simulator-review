@@ -5,6 +5,11 @@ jupyter-server-proxy
 #Simulator package requirements
 numpy #jyro
 
+#Kernel for processing demo
+#Requires postBuild install: python3 -m calysto_processing install --user
+calysto_processing
+
+
 # Useful for plotting and analysis
 pandas
 matplotlib
