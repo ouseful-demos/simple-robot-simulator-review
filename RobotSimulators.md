@@ -359,7 +359,7 @@ __Disadvantages__: VREP can be resource hungry and the installation path can be 
 
 ### ROS
 
-[*ROS*, the *R*obot *O*perating *S*ystem*](https://www.ros.org/), is widely used for controlling a wide range of research (and industry?) robot platforms. It offers a native Python API.
+[*ROS*, the *R*obot *O*perating *S*ystem](https://www.ros.org/), is widely used for controlling a wide range of research (and industry?) robot platforms. It offers a native Python API.
 
 *[I have not tested any ROS tools mentioned here unless otherwise stated.]*
 
@@ -367,7 +367,7 @@ ROS is part of an ecosystem of tools including the ROS programming APIs and the 
 
 ![View into VM running ROS and STDR](images/ros_ubuntu_2d_sim.png)
 
-ROS APIs are also supported by other simulators including V-REP and WeBots.
+ROS APIs are also supported by other simulators including V-REP and Webots.
 
 [RViz](http://wiki.ros.org/rviz) and the recently released [webviz](https://webviz.io/) provide support for visualising ROS robot sensor data via a desktop client and the browser respectively.
 
@@ -385,7 +385,7 @@ An example environment showing integrated contrpl of a Gzweb simulated robot usi
 
 ![Example of Gzweb and Jupyter notebook via smart-grasping-sandbox container](images/Smart_Grasping_Sandbox.png)
 
-The Jupyter notebook is served on `localhost:8081` and Gzweb on `localhost:8080`. (A *cloud9* editor can also be exposed, mapped from port 8181 inside the container; this could be removed from the image to reduce image size.)
+The Jupyter notebook is served on `localhost:8081` and Gzweb on `localhost:8080`. (A *cloud9* editor can also be exposed, mapped from port 8181 inside the container; this could be removed from the image to reduce image size. I donlt recall offhabd what port 7681 was and donlt fancy waiting for the 6+GB image to download again...)
 
 A simpler, much lighter approach, without the Gazebo/Gzweb simulator is taken in [RobInLabUJI/ROS-Tutorials](https://github.com/RobInLabUJI/ROS-Tutorials), a set of simple tutorials for getting started with ROS using a 2D simulated turtle. You can try it out here: [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/RobInLabUJI/ROS-Tutorials/master?urlpath=lab)
 
@@ -399,7 +399,7 @@ Another, more advanced set of examples can be found via this [ROSDev 2019 presen
 
 __Advantages__: robot researchers seem to like ROS; it's Python; a 2D sim and ROS server can run in a notebook on MyBinder.
 
-__Disadvantages__: lots of the demos are huge, and either broken or seem require mad sysdev skills to get working. The current on-ramp is appalling. The ROS architecture takes a certain amount of explaining, which may get in the way of teaching elementary programming unless we add a lot of magic support (which also means identifying some sensible magic to create).
+__Disadvantages__: lots of the demos are huge, and either broken or seem require mad sysdev skills to get working. The current on-ramp is appalling, although `RobInLabUJI/ROS-Tutorials` is quite a gentle way in. The ROS architecture takes a certain amount of explaining, which may get in the way of teaching elementary programming unless we add a lot of magic support (which also means identifying some sensible magic to create).
 
 
 #### Robot Development Studio
@@ -408,15 +408,11 @@ https://www.theconstructsim.com/rds-ros-development-studio/
 
 **didn't work for me when I tried - Jupyter kernel kept dying**
 
-#### jupyter-ros
-
-jupyter-ros https://github.com/RoboStack/jupyter-ros
 
 
-web viz for ros https://webviz.io/ alternative to RViz
 
 
-Gazebo / ROS eg ?? https://github.com/shadow-robot/ , ??https://github.com/FlorianWilk/ROSStudio
+
 smart_grasping_sandbox
 
 
