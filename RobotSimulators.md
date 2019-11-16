@@ -333,7 +333,7 @@ You can try the *Webots* simulator out via the [robotbenchmark](https://robotben
 
 V-REP is a fully featured, cross-platform 3D simulator developed by ???
 
-The VREP simulator comes with a wide range of simualted robot models, from mobile robots to robot arms. A Baxter robot model is also available.
+The VREP simulator comes with a wide range of simulated robot models, from mobile robots to robot arms. A Baxter robot model is also available.
 
 Simulated robots can be programmed natively within the VREP environment using Lua scripts. However, a Python API is also available which allows robots to be scripted using Python code. A ROS interface for programming VREP simulated robots using ROS is also available [although I haven't tried it...]
 
@@ -355,7 +355,7 @@ Further context is available in a series of blog posts produced at the time, for
 
 __Advantages__: VREP is a fully featured simulator offering a wide range of robot models. A Python API, as well as a ROS interface, are available.
 
-__Disadvantages__: VREP can be resource hungry and the installation path can be tricky, particular if the programming environment needs to be interfaced with it; this can be simplified by distributing the whole environment via a virtual machine, although performance of the vitualised simulator compared to running it as a native host desktop application may be impaired. [I don't remember if I tried to run it on a powerful server access via RDP? If using RDP, the notebook server could be accessed via a browser installed on the virtual desktop, or as a headless service exposed via another http port.]
+__Disadvantages__: VREP can be resource hungry and the installation path can be tricky, particular if the programming environment needs to be interfaced with it; this can be simplified by distributing the whole environment via a virtual machine, although performance of the vitualised simulator compared to running it as a native host desktop application may be impaired. *[I don't remember if I tried to run it on a powerful server access via RDP? If using RDP, the notebook server could be accessed via a browser installed on the virtual desktop, or as a headless service exposed via another http port.]*
 
 ### ROS
 
