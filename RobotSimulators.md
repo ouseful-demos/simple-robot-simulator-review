@@ -359,11 +359,47 @@ __Disadvantages__: VREP can be resource hungry and the installation path can be 
 
 ### ROS
 
+[*ROS*, the *R*obot *O*perating *S*ystem*](https://www.ros.org/), is widely used for controlling a wide range of research (and industry?) robot platforms. It offers a native Python API.
 
-*ROS*, the *R*obot *O*perating *S*ystem*, 
+*[I have not tested any ROS tools mentioned here unless otherwise stated.]*
 
-![](images/ros_ubuntu_2d_sim.png)
+ROS is part of an ecosystem of tools including the ROS programming APIs and the [Gazebo](http://gazebosim.org/) robot simulator. Gazebo also has a web client, [Gzweb (gz3d)](http://gazebosim.org/gzweb.html). Several 2D simulators are also available including the official [STDR (simple two dimensional robot?) simulator](http://wiki.ros.org/stdr_simulator) and the community provided [`flatland`](https://github.com/avidbots/flatland).
 
+![View into VM running ROS and STDR](images/ros_ubuntu_2d_sim.png)
+
+ROS APIs are also supported by other simulators including V-REP and WeBots.
+
+[RViz](http://wiki.ros.org/rviz) and the recently released [webviz](https://webviz.io/) provide support for visualising ROS robot sensor data via a desktop client and the browser respectively.
+
+[`jupyter-ros`](https://github.com/RoboStack/jupyter-ros) is a relatively recent JupyterLab extension, currently under development, that aims to provide a range of interactive widgets for visualising ROS environments and robot data. *(I wonder if it will integrate `webviz` at some point?)*
+
+Despite being under active development for several years, getting a working ROS environment up and running on a cross-platform basis still seems to be a difficult undertaking.
+
+The simplest approach would be via a Docker or Virtualbox distribution (I thought I had a Vagrantfile somewhere for building a Virtualbox image, but can't seem to find it :-(
+
+The image sizes can be __very large__ (several GB download) and I assume that resource requirements for running ROS and the Gazebo simulator are such that OU min spec machines might struggle.
+
+An example environment showing integrated contrpl of a Gzweb simulated robot using code running in a Jupyter notebook can be found via the public simulation sandbox for Shadow's Smart Grasping System [`smart_grasping_sandbox`](https://github.com/shadow-robot/smart_grasping_sandbox). With docker installed, run:
+
+`docker run -it --rm --name sgsdemo -p 8080:8080 -p 8081:8888 -p 7681:7681 shadowrobot/`
+
+![Example of Gzweb and Jupyter notebook via smart-grasping-sandbox container](images/Smart_Grasping_Sandbox.png)
+
+The Jupyter notebook is served on `localhost:8081` and Gzweb on `localhost:8080`. (A *cloud9* editor can also be exposed, mapped from port 8181 inside the container; this could be removed from the image to reduce image size.)
+
+A simpler, much lighter approach, without the Gazebo/Gzweb simulator is taken in [RobInLabUJI/ROS-Tutorials](https://github.com/RobInLabUJI/ROS-Tutorials), a set of simple tutorials for getting started with ROS using a 2D simulated turtle. You can try it out here: [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/RobInLabUJI/ROS-Tutorials/master?urlpath=lab)
+
+![ROS Turtlesim in binder notebook demo](images/RobInLabUJI_ROS-Tutorials.png)
+
+It runs okay in Binder, which is akin to an OU min spec machine, so that's a possibility. [I got `jupyter-ros` to install though couldn't build the labexetension (no nodejs), which is I'm guessing why I could load the package but not see any `ros3d` widgets?]
+
+There looks to be a simple Gzweb container here: [DukeRobotics/gzweb-rosssh](https://github.com/DukeRobotics/gzweb-rosssh). It might be worth forking the `RobInLabUJI/ROS-Tutorials` repo to see if we could add in Gazebo/Gzweb and then connect to and control a scene in it? By the by, a tool for creating custom Dockerfiles for building ROS environments is [also available](https://github.com/RobInLabUJI/ROSLab).
+
+Another, more advanced set of examples can be found via this [ROSDev 2019 presentation](https://github.com/carlosjoserg/rosdev_talk_2019/) describing a couple of simulated robots playing chess. A more complete statement of the exercise can be found [here](https://sir.upc.edu/projects/rostutorials/final_work/index.html) and I think this may be the [associated repo](https://bitbucket.org/janrosell/ros1819-final-project/src/master/).
+
+__Advantages__: robot researchers seem to like ROS; it's Python; a 2D sim and ROS server can run in a notebook on MyBinder.
+
+__Disadvantages__: lots of the demos are huge, and either broken or seem require mad sysdev skills to get working. The current on-ramp is appalling. The ROS architecture takes a certain amount of explaining, which may get in the way of teaching elementary programming unless we add a lot of magic support (which also means identifying some sensible magic to create).
 
 
 #### Robot Development Studio
