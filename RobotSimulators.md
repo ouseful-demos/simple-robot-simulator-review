@@ -323,10 +323,37 @@ __To explore__: the developers of another blockly style environment, *BlockPy*, 
 ### Webots
 
 
-Webots is a cross-platform eg https://github.com/cyberbotics/webots
+[Webots](https://cyberbotics.com/) [[repo](https://github.com/cyberbotics/webots)] is an open-source, cross-platform robot programming and simulation environment offering "accurate physics" and a range of robot models. 
 
+Simulators can be complex, although running them can requier a lot of compute resource and crash your computer if note available.
 
-You can try the *Webots* simulator out via the [robotbenchmark](https://robotbenchmark.net/) robot challenge website.
+![Webots desktop complex world](images/webots2.png)
+
+Lots of other simulations are also provided, including quite simple ones.
+
+![Webots desktop simple world](images/webots3.png)
+
+Several langauages are supported  — C, Python, Java, as well as ROS (though the latter make take some setting up on Windows?).
+
+![Webots lanuages - py example](Webots_langs.png)
+
+Webots is also available via an online simulator published via the [robotbenchmark](https://robotbenchmark.net/) robot challenge website. (Similar environments [can be self-hosted](https://www.cyberbotics.com/doc/guide/web-simulation#description).
+
+Challenge tasks can be attempted without logging in, or a personal account can be created and then used to enter challenges competitively.
+
+![Robotbenchmark / webots online competition and simulation server](images/robotbenchmark.png)
+
+The online / web-streamed robotbenchmark environment provides a browser based environment giving the simulator view, a pop-up information box defining the task at hand and providing limitied instruction, a terminal view and a simple text editor that can be used to add programmatic control to the corresponding simulated robot. 
+
+![Robotbenchmark / webots online browser based desktop](images/robotbenchmark2.png)
+
+A wide range of pre-defined challenges are available on the Robotbenchmark website.
+
+__Advantages:__ cross platfrom simulator with a wide range of simulated robot models and world components. Robots can be rpogrammed using a variety of languages, including Python. A streaming web-based environment is available, although the UI differs from the desktop one.
+
+__Disadvantages:__ Complex simulations can clobber your machine.
+
+__To explore:__ how easy is it to set up the web streaming server? How easy is is to create custom challenges within it? Is a similar inrstruction / information box available in the desktop application?
 
 
 ### V-REP
