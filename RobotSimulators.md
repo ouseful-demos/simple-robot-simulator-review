@@ -404,25 +404,27 @@ __Disadvantages__: lots of the demos are huge, and either broken or seem require
 
 #### Robot Development Studio
 
-https://www.theconstructsim.com/rds-ros-development-studio/
+The  [ROS Robot Development Studio (RDS)](https://www.theconstructsim.com/rds-ros-development-studio/) is an online educational environment for running Jupyter notebook programmed ROS based simulations visualised using Gzweb. A free plan offers several simple tutorials with minimal compute resource with an upsell business model that allows regsitered users to enable more resource (more processor memory and processor cores, or GPUs for example.
 
-**didn't work for me when I tried - Jupyter kernel kept dying**
+Creating a project allows you to select a Linux O/S and version of Gazebo and a container is launched on that basis:
 
+![ROS RDS project initialisation](images/RDS_-_ROS_Development_Studio.png)
 
+You can construct a simulation from a set of predefined worlds and robot models:
 
+![ROS simulation construction from world and robot](images/RDS_-_ROS_Development_Studio2.png)
 
+The development environment itself is a browser based desktop / workbench within which you can view the simulator, a Jupyter notebook, an IDE (which didnlt load for me) and a terminal:
 
+![ROD RDS simulatot and environment view](images/RDS_-_ROS_Development_Studio4.png)
 
-smart_grasping_sandbox
+On the free plan, having the simulator window open pretty much clobbered everything for me.
 
+![ROS RDS resource warning](images/RDS_-_ROS_Development_Studio3.png)
 
+__Advantages__: the web based environment provides a range of integrated tools that can be used to programme a simulated robot. Coneectors are available so that you can run programmes within the environment against you own, network connected real robots.
 
-http://lenkaspace.net/tutorials/programming/robotSimulatorsComparison
-
-
-Amazon Deep Racer
-
-https://medium.com/adventures-in-autonomous-vehicles/introducing-the-f1-10-simulator-b614af2cd652 https://github.com/mlab-upenn/racecar_simulator/tree/master docker https://hub.docker.com/r/billyz/f110sim
+__Disadvantages__: didn't work for me under the free plan; not open source so no immediate way of running a self-hosted version free of any license fee, if at all.
 
 
 ## Customising / Forking a Current Environment or Creating a New Bespoke One
