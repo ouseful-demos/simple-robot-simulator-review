@@ -358,7 +358,7 @@ __To explore:__ how easy is it to set up the web streaming server? How easy is i
 
 ### V-REP
 
-V-REP is a fully featured, cross-platform 3D simulator developed by ???
+V-REP is a fully featured, cross-platform 3D simulator developed by Coppelia Robotics.
 
 The VREP simulator comes with a wide range of simulated robot models, from mobile robots to robot arms. A Baxter robot model is also available.
 
