@@ -154,7 +154,7 @@ __Advantages:__ simple 2D simulator has much of the feel of RobotLearn; converti
 
 __Disadvantages__: accessibility may be an issue; blocks editor does not allow text-based programming / editing, although inpsection of autmoatically generated equivalent code is possible.
 
-TO DO - mention of the other dev boards Open Roberta Lab supports
+As well as the simple robot programming environment, Open Roberta Lab can be used to programme some simple development boards, such as an Arduino, Senseboard or [BOB3](https://www.bob3.org/en/) board, directly, or as with the [Microbit](https://microbit.org/), directly *or* in simulation.
 
 __Key Considerations__: cross-platform local delivery possible via Docker container;
 
@@ -298,9 +298,9 @@ A demo script for the Java/Processing port of the `Jyro` simulator can be found 
 
 *Ev3devSim* [[repo]( https://github.com/QuirkyCort/ev3dev-sim)] is a purely browser based simulator that can be run using a local webserver.
 
-![](images/EV3DEV_Python_Simulator.png)
+![Ev3dev simulator](images/EV3DEV_Python_Simulator.png)
 
-![](images/EV3DEV_Python_Simulator2.png)
+![Ev3dev robot config](images/EV3DEV_Python_Simulator2.png)
 
 
 Try out a [live demo here](https://www.aposteriori.com.sg/Ev3devSim/index.html).
@@ -309,13 +309,11 @@ The application can also be run within MyBinder proxied via `jupyer-server-proxy
 
 Colour, gyro and ultrasonic sensors are available, with two colour sensors mounted by default at the front of the simualted robot. The motors are either independently controlled or ganged (*moveTank*, *moveSteering*) and are either running at a specified percentage level or they are stopped. When motors are turned off, the robot stops instantly.
 
-__Advantages__:
+__Advantages__: purely browser based; custom commands can be added via Skulpt parser somehow?
 
-__Disadvantages__:
+__Disadvantages__: limited instructional commands?  [I haven't made a chance / time to ry out some of the activities yet...]
 
 __To explore__: the developers of another blockly style environment, *BlockPy*, are currently developing an editor, [*BlockMirror*](https://github.com/blockpy-edu/BlockMirror) that provides *"[a]n interface for dual block/text representation with Blockly"*. The *BlockMirror* editor embeds the *Skulpt* parser (as does *Ev3devSim*) and allows the user to toggle between block and code views: editing one view is reflected by changes to the other. I wonder how easy it would be to use *BlockMirror* as the editor within *Ev3devSim*? (I have filed an [issue](https://github.com/QuirkyCort/ev3dev-sim/issues/3) to the original `ev3dev-sim` repo related to this.) It should be easy enough to package *Ev3devSim* for cross-platform use as an electron application. I also wonder about how easy it would be to separate out the components of *ev3dev-sim* and run it inside a Jupyter notebook (or JupyterLab) using a [*Skulpt* kernel](https://github.com/Calysto/skulpt_python). Something else that might be worth exploring is whether the simulator could be integrated into BlockPy, allowing that environment to be used for blocks or text based programming in a data or robotics context; the robotics simulator might also provide data for visualising/analysing in the data science context? [Here's a related [issue](https://github.com/blockpy-edu/blockpy/issues/78).]
-
-
 
 
 ????Maybe also https://github.com/ev3dev/ev3dev-lang-python/issues/264#issuecomment-530658432
