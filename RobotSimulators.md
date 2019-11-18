@@ -106,7 +106,7 @@ The following (brief) review is not necessarily comprehensive.
 
 ### Python Turtle / ipyturtle
 
-The Python programming language comes with an implementation of a 2D turtle, often used to to teach elementary programming. (Indeed, a python turtle is used to introduce Python programming in TM112.)
+The Python programming language comes with an implementation of a 2D turtle, often used to teach elementary programming. (Indeed, a python turtle is used to introduce Python programming in TM112.)
 
 The native Python turtle runs in a pop-up Tk window although python packages to provide a turtle canvas in Jupyter notebooks ([`ipython-turtle-widget`](https://github.com/gkvoelkl/ipython-turtle-widget)) and JupyterLab ([`jupyterlab-turtlegraphics`](https://github.com/dirkcgrunwald/jupyterlab-turtlegraphics), although not (yet?) supported for recent versions of JupyterLab).
 
@@ -228,7 +228,7 @@ As with Jyro, worlds can be configured and rendered in a notebook output cell. O
 
 A text area display within the simulator view can be scripted via the robot definition.
 
-The robot is programmed by subclassing a `Robot` class and adding a `brain()`...
+The robot is programmed by subclassing a `Robot` class and adding a `brain()`:
 
 
 ```java
@@ -443,7 +443,7 @@ It may be worth exploring the extent to which BlockMirror could be used to gener
 
 Universal Robots offer a download for [URSim](https://www.universal-robots.com/download/?option=18940), a Linux based simulator that could be run via a virtual machine. *[I haven't tried this yet. A possibly useful Docker container running the simulator behind a Guacamole server offering an browser based UI, as well as support for RDP, is defined here: [ahobsonsayers/DockURSim](https://github.com/ahobsonsayers/DockURSim). A possibly useful install script can be found [here](https://gist.github.com/kmpm/35f77936c2bd05eb78d442668ded3f7f); I havenlt found a Vagrantfile yet...]*
 
-##neural  replacement
+## neural  replacement
 
 We also need a replacement for `Neural.exe`
 
