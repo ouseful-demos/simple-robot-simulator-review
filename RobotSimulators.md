@@ -45,6 +45,44 @@ Virtualised environments can be made available to students remotely as well as l
 TM112 has recently experimented with hosting a scaleable multi-user JupyterHub service accessed via a VLE module website to deliver a temporary Jupyter notebook activity to students. Students can run activities during a single online session but not save those activities to return to them later. It is quite possible to configure the JupyterHub server to provide persistent student accounts, although this requires additional storage resource. [Currently, there is no precedent for this mode of operation within the OU although many other institutions do offer this sort of personalised service.] The TM112 JupyterHub service serves a potentially user-selectable container instance to a connected user via a scaleable Kubernetes backend. As well as running a Jupyter notebook server UI, the notebook server can proxy other HTTP/HTML user interfaces (for example, running [RStudio via a proxy](https://github.com/jupyterhub/jupyter-rsession-proxy)), including remote desktops exposed via no-vnc (for example, [`jupyter-desktop`](https://github.com/yuvipanda/jupyter-desktop)). JupyterHub can thus be used to provide authenticated multi-user access to arbitrary, personal, containerised applications other than Jupyter notebooks, albeit proxied by the personal notebook server running in the container.
 
 
+## Content Authoring and Student Ownership
+
+As well as issues associated with distributing software to students in general, we should also consider how we both *author* the instructional material associated with software activities and deliver it as instructional material to students.
+
+The traditional OU model is to produce instructional material for delivery as print material or via the VLE. That material is typically authored in Microsoft Word, converted to OU-XML, then rendered to PDF/print or HTML for the VLE.
+
+One advantage of the print material route for students is that can keep a copy of the material forever (or resell it!), another is that they can take ownership of the material by annotating it.
+
+Whilst academic instructional material associated with TM351 was pubished as VLE based instrictional material,  the content associated with practical activities (data management and analysis using Python) was delivered as narrative style Jupyter notebooks embedding practical code activities inline.
+
+Jupyter notebooks were downloaded by students from the VLE, at which point they took ownership of them in two senses:
+
+1. by running the notebooks in a virtual machine on their own computer;
+2. by being able to edit and save changes to the notebooks (i.e. to annotate them).
+
+As well as running Jupyter notebooks *as notebooks*, publishing mechanisms also exist for publishing HTML pages that can execute inline code against a remote server. An example can be seen here: [executing inline code in an HTML page against a remote server]().
+
+![]()
+
+This means that "static interactive" materials could be delivered to students via the VLE that would allow them to run exercises within the VLE HTML webpage context, change the code and execure it, *but not save their code*. (The activities thus become "temporary" or ephemeral.)
+
+When it comes to authoring such material, there are several options:
+
+1. Authoring in Jupyter notebooks using the Jupyter notebook user interface;
+2. Authoring in markdown and using Jupytext to convert the materials into the Jupyter notebook format as well as allowing the markdown to be edited within a Jupyter notebook environment;
+3. Authoring notebooks using an alternative notebook editor, such as Polynote (which has a friendly WYSIWYG text editing enviroment).
+
+![Polynote](images/polynote.png)
+
+TM129 was always claimed to provide a module format that would support innovation and updating over short timescales, with potentially hot swappable 10 point blocks that could be rapidly updated and replaced, an opportunity was squandered right from the start. With the update to the robotics block, we do have an opportunity to explore new production, delivery workflows and potentially even pedagogical styles, in the context of producing and delivering interactive practical activity course materials.
+
+I have also argued previously that there are opportunities for separate blocks to scaffold each other, for example in the context of virtualisation, where one block could look at the rationale for and implementation of virtualised services, with another block using virtualisation to deliver one or more services in contexts that demonstrate why virtualisation is appropriate. For example, we could deliver a light docker environment to students running a simple Python simulator whilst also giving them a limited experience of a fully featured simulator running on a powerful, GPU enabled remote server.
+
+Providing students with some practical experience in setting up and running virtualised services could simplify a lot of our software delivery issues and enable students to run a wider range of services for themselves both inside and outside the OU. The blockers to OU adoption come from IT and LTI, who won't engage in looking for strategic ways to deliver virtualised services and benefit from them and from academics, who have no idea what virtualisation is or why it might be useful, let alone how we might go about making use of it. Finance would also probably have something to say about paying for any remote hosting, but it would then be down to us to demonstrate that it would generate effiencies elsewhere, eg in terms of production, maintenance and support and improved retention, and intangibles like a better student experience and improved opportunities for developing engaging and meaningful interactive activities.
+
+Each module arguing separately for support for virtualised services means we are already divided and con	quered. We need a strategic institutional play. But in absence of that, as separate modules, we can try to set precendents and can try to obtain jigsaw pieces that may be of benefit to other modules. We have to finagle a strategy from tactics.
+
+
 ## TM129 Practicals, <= 19J
 
 TM129 provides practical experience in simple robot programming using the `RobotLab` 2D simulator, originally developed for T184.
