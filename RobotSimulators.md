@@ -439,5 +439,7 @@ It may be worth exploring the extent to which BlockMirror could be used to gener
 
 ##neural  replacement
 
- - Doug Blank again https://github.com/Calysto/conx-notebooks https://conx.readthedocs.io/en/latest/
+We also need a replacement for `Neural.exe`
+
+ - Doug Blank again offers perhaps the best bet? https://github.com/Calysto/conx-notebooks https://conx.readthedocs.io/en/latest/
 
