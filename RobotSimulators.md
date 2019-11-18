@@ -435,7 +435,11 @@ BlockPy does not embed an animated stage canvas (unlike Scratch / OU Build) but 
 It may be worth exploring the extent to which BlockMirror could be used to generate code that could be used to control a simulator component decoupled from one of the other packages.
 
 
+## Commercial Platforms
 
+*ABB Robotics* have a simulation environment for their robot platform, but the free trial plan seems limited to 30 days: [ABB Robot Studio](https://new.abb.com/products/robotics/robotstudio).
+
+Universal Robots offer a download for [URSim](https://www.universal-robots.com/download/?option=18940), a Linux based simulator that could be run via a virtual machine. *[I haven't tried this yet. A possibly useful Docker container running the simulator behind a Guacamole server offering an browser based UI, as well as support for RDP, is defined here: [ahobsonsayers/DockURSim](https://github.com/ahobsonsayers/DockURSim). A possibly useful install script can be found [here](https://gist.github.com/kmpm/35f77936c2bd05eb78d442668ded3f7f); I havenlt found a Vagrantfile yet...]*
 
 ##neural  replacement
 
