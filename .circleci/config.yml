@@ -1,0 +1,65 @@
+ #Python CircleCI 2.0 configuration file
+#
+# Inspired by: https://github.com/spatialaudio/nbsphinx/blob/master/.circleci/config.yml
+#
+# Check https://circleci.com/docs/2.0/language-python/ for more details
+#
+version: 2.1
+jobs:
+  build_docs:
+    docker:
+      # https://github.com/dante-ev/docker-texlive
+      - image: danteev/texlive
+
+    working_directory: ~/checkout
+
+    environment:
+      PIP_INSTALL: python3 -m pip install --progress-bar off --upgrade
+
+    steps:
+      - checkout
+
+      - restore_cache:
+          keys:
+            - v1-deps-{{ .Branch }}-{{ checksum "requirements-pub.txt" }}
+            # fallbacks
+            - v1-deps-{{ .Branch }}-
+            - v1-deps-
+      - run:
+          name: Installing py dependencies
+          command: |
+            $PIP_INSTALL -r requirements.txt
+      - save_cache:
+          paths:
+            - ~/.cache/pip
+          key: v1-deps-{{ .Branch }}-{{ checksum "requirements-pub.txt" }}
+
+      - run:
+          name: Installing apt Packages
+          command: |
+            apt-get update
+            apt-get install -y librsvg2-bin
+      - run:
+          name: Building HTML - there is no cache atm?
+          command: |
+            python3 -m sphinx . build
+            #Hacky way of giving the gh-pages branch a possibly README
+            # and masking any HTML rendered README...
+            cp README.md build/ 2>/dev/null
+            rm -f build/README.html
+      - run:
+          name: Pushing to gh-pages
+          command: |
+            # CircleCI ignore gh-pages https://discuss.circleci.com/t/cant-ignore-the-gh-pages-branch/2002
+            ghp-import -p -n -f -m 'auto commit gh-pages [ci skip]' -r https://${GITHUB_PERSONAL_TOKEN}@github.com/${CIRCLE_PROJECT_USERNAME}/${CIRCLE_PROJECT_REPONAME}.git build
+workflows:
+  version: 2
+  build:
+    jobs:
+      - build_docs:
+          filters:
+            branches:
+              only:
+                - master
+              ignore:
+                - gh-pages

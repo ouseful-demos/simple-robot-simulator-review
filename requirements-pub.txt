@@ -1,0 +1,7 @@
+# circle.ci support
+ghp-import
+
+#Sphinx docs
+sphinx
+nbsphinx
+alabaster
