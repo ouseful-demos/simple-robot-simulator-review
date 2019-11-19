@@ -5,3 +5,6 @@ ghp-import
 sphinx
 nbsphinx
 alabaster
+
+#Sphinx md support - https://www.sphinx-doc.org/en/master/usage/markdown.html
+recommonmark

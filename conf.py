@@ -49,6 +49,7 @@ extensions = [
     'nbsphinx',
     'sphinx.ext.mathjax',
     'sphinx.ext.githubpages',
+    'recommonmark',
 ]
 
 # Add any paths that contain templates here, relative to this directory.
@@ -202,8 +203,9 @@ epub_exclude_files = ['search.html']
 
 # -- Extension configuration -------------------------------------------------
 
+#Handle raw markdown rather than via jupytext
+source_suffix = {'.md': 'markdown'}
 #import jupytext
-
 #nbsphinx_custom_formats = {
 #    '.md': lambda s: jupytext.reads(s, '.md'),
 #}
