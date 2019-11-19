@@ -458,7 +458,7 @@ It runs okay in Binder, which is akin to an OU min spec machine, so that's a pos
 
 There looks to be a simple Gzweb container here: [DukeRobotics/gzweb-rosssh](https://github.com/DukeRobotics/gzweb-rosssh). It might be worth forking the `RobInLabUJI/ROS-Tutorials` repo to see if we could add in Gazebo/Gzweb and then connect to and control a scene in it? By the by, a tool for creating custom Dockerfiles for building ROS environments is [also available](https://github.com/RobInLabUJI/ROSLab).
 
-Poking around a bit more, this container — [devrt/ros-devcontainer-vscode](https://github.com/devrt/ros-devcontainer-vscode) — seems to include ROS and Gazebo/Gzweb. VSCode can be connected to the container, or a provided `dcoker-compose` script will launch the ROS container and an appropriately configured and connected browser based Theia editor.
+Poking around a bit more, this container — [devrt/ros-devcontainer-vscode](https://github.com/devrt/ros-devcontainer-vscode) — seems to include ROS and Gazebo/Gzweb. VSCode can be connected to the container, or a provided `docker-compose` script will launch the ROS container and an appropriately configured and connected browser based Theia editor.
 
 Another, more advanced set of examples can be found via this [ROSDev 2019 presentation](https://github.com/carlosjoserg/rosdev_talk_2019/) describing a couple of simulated robots playing chess. A more complete statement of the exercise can be found [here](https://sir.upc.edu/projects/rostutorials/final_work/index.html) and I think this may be the [associated repo](https://bitbucket.org/janrosell/ros1819-final-project/src/master/).
 
