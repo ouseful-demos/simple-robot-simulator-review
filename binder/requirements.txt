@@ -9,6 +9,9 @@ numpy #jyro
 #Requires postBuild install: python3 -m calysto_processing install --user
 calysto_processing
 
+#For generating interactive web demos
+nbinteract
+voila
 
 # Useful for plotting and analysis
 pandas
