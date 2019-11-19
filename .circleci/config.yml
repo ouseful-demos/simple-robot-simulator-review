@@ -28,7 +28,7 @@ jobs:
       - run:
           name: Installing py dependencies
           command: |
-            $PIP_INSTALL -r requirements.txt
+            $PIP_INSTALL -r requirements-pub.txt
       - save_cache:
           paths:
             - ~/.cache/pip
