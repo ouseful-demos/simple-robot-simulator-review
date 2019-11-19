@@ -20,3 +20,5 @@ python3 -m calysto_processing install --user
 #wget -q https://jupyter.brynmawr.edu/services/public/dblank/CS110%20Intro%20to%20Computing/2017-Spring/Lectures/Hit.pde
 #wget -q https://jupyter.brynmawr.edu/services/public/dblank/CS110%20Intro%20to%20Computing/2017-Spring/Lectures/Lectures/World.pde
 
+jupyter serverextension enable voila --sys-prefix
+
