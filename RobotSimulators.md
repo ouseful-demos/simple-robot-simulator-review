@@ -385,6 +385,8 @@ The online / web-streamed robotbenchmark environment provides a browser based en
 
 A wide range of pre-defined challenges are available on the Robotbenchmark website.
 
+It also looks like it [should be possible](https://cyberbotics.com/doc/guide/interfacing-webots-to-third-party-software-with-tcp-ip) to control a robot in a Webots simulation from a Jupyter notebook [[early example?](https://www.youtube.com/watch?v=Vj936RLW-KY)].
+
 __Advantages:__ cross platfrom simulator with a wide range of simulated robot models and world components. Robots can be rpogrammed using a variety of languages, including Python. A streaming web-based environment is available, although the UI differs from the desktop one.
 
 __Disadvantages:__ Complex simulations can clobber your machine.
@@ -456,7 +458,11 @@ A simpler, much lighter approach, without the Gazebo/Gzweb simulator is taken in
 
 It runs okay in Binder, which is akin to an OU min spec machine, so that's a possibility. [I got `jupyter-ros` to install though couldn't build the labexetension (no nodejs), which is I'm guessing why I could load the package but not see any `ros3d` widgets?]
 
-There looks to be a simple Gzweb container here: [DukeRobotics/gzweb-rosssh](https://github.com/DukeRobotics/gzweb-rosssh). It might be worth forking the `RobInLabUJI/ROS-Tutorials` repo to see if we could add in Gazebo/Gzweb and then connect to and control a scene in it? By the by, a tool for creating custom Dockerfiles for building ROS environments is [also available](https://github.com/RobInLabUJI/ROSLab).
+See also their mininal [ROSOnline](https://github.com/RobInLabUJI/ROS-Online) (runs in Binder) demo.  A tool for creating custom Dockerfiles for building ROS environments is [also available](https://github.com/RobInLabUJI/ROSLab).
+
+The same group also appear to have a set of demos that include using notebooks to control Webots simulations using ROS: [try-a-bot](https://github.com/RobInLabUJI/try-a-bot/), from eg this set-up: [example](https://github.com/RobInLabUJI/try-a-bot/blob/master/try-a-pioneer/launch)]. Frustratingly, there doesn't look to be the setup for a Docker container or virtual machine image?
+
+There looks to be a simple Gzweb container here: [DukeRobotics/gzweb-rosssh](https://github.com/DukeRobotics/gzweb-rosssh). It might be worth forking the `RobInLabUJI/ROS-Tutorials` repo to see if we could add in Gazebo/Gzweb and then connect to and control a scene in it?
 
 Poking around a bit more, this container — [devrt/ros-devcontainer-vscode](https://github.com/devrt/ros-devcontainer-vscode) — seems to include ROS and Gazebo/Gzweb. VSCode can be connected to the container, or a provided `docker-compose` script will launch the ROS container and an appropriately configured and connected browser based Theia editor.
 
@@ -467,7 +473,7 @@ __Advantages__: robot researchers seem to like ROS; it's Python; a 2D sim and RO
 __Disadvantages__: lots of the demos are huge, and either broken or seem require mad sysdev skills to get working. The current on-ramp is appalling, although `RobInLabUJI/ROS-Tutorials` is quite a gentle way in. The ROS architecture takes a certain amount of explaining, which may get in the way of teaching elementary programming unless we add a lot of magic support (which also means identifying some sensible magic to create).
 
 
-#### Robot Development Studio
+### Robot Development Studio
 
 The  [ROS Robot Development Studio (RDS)](https://www.theconstructsim.com/rds-ros-development-studio/) is an online educational environment for running Jupyter notebook programmed ROS based simulations visualised using Gzweb. A free plan offers several simple tutorials with minimal compute resource with an upsell business model that allows regsitered users to enable more resource (more processor memory and processor cores, or GPUs for example.
 
