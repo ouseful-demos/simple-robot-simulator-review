@@ -387,6 +387,8 @@ A wide range of pre-defined challenges are available on the Robotbenchmark websi
 
 It also looks like it [should be possible](https://cyberbotics.com/doc/guide/interfacing-webots-to-third-party-software-with-tcp-ip) to control a robot in a Webots simulation from a Jupyter notebook [[early example?](https://www.youtube.com/watch?v=Vj936RLW-KY)].
 
+Documentation examples show how Webots can be controlled from [VSCode (C/C++)](https://cyberbotics.com/doc/guide/using-visual-studio-with-webots) and [PyCharm (python](https://cyberbotics.com/doc/guide/using-pycharm-with-webots). The VSCode Python extension now supports Jupyter notebooks, so it would be interesting to explore controlling the Webots simulator from a notebook in VSCode. The PyCharm example might also provide clues as to how to get started controlling Webots from a Jupyter notebook directly. Might a Webots Jupyter kernel also make sense, based either on a Python kernel, or a C kernel?
+
 __Advantages:__ cross platfrom simulator with a wide range of simulated robot models and world components. Robots can be rpogrammed using a variety of languages, including Python. A streaming web-based environment is available, although the UI differs from the desktop one.
 
 __Disadvantages:__ Complex simulations can clobber your machine.
