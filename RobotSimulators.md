@@ -498,6 +498,13 @@ __Advantages__: the web based environment provides a range of integrated tools t
 __Disadvantages__: didn't work for me under the free plan; not open source so no immediate way of running a self-hosted version free of any license fee, if at all.
 
 
+## `Gym` Toolkit
+
+[`Gym`](https://gym.openai.com/) *"is a toolkit for developing and comparing reinforcement learning algorithms"*. It includes several [robot simulations](https://gym.openai.com/envs/#robotics) that frame different reinforcement learning challenges, including a pick and place task and a robot hand manipulation task.
+
+A Masters project [notebook](https://github.com/Iqra350/krock2_traversability/blob/master/core/Simulation.ipynb) seems to offer Gym like activities using a Webots environment (maybe?!)? The environmental set-up can be found [here](https://github.com/Iqra350/krock2_traversability/tree/master/core) *[I haven't tried this yet]*. This is related: [krock docker](https://github.com/romarcg/krock-sim).
+
+
 ## Customising / Forking a Current Environment or Creating a New Bespoke One
 
 An earlier attempt at updating TM129 robotics module commissioned the development of a webservice mediated application with a UI resembling the original RobotLab UI, although I donlt believe this was delivered.
