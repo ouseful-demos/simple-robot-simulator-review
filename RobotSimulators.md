@@ -523,6 +523,10 @@ It may be worth exploring the extent to which BlockMirror could be used to gener
 
 Universal Robots offer a download for [URSim](https://www.universal-robots.com/download/?option=18940), a Linux based simulator that could be run via a virtual machine. *[I haven't tried this yet. A possibly useful Docker container running the simulator behind a Guacamole server offering an browser based UI, as well as support for RDP, is defined here: [ahobsonsayers/DockURSim](https://github.com/ahobsonsayers/DockURSim). A possibly useful install script can be found [here](https://gist.github.com/kmpm/35f77936c2bd05eb78d442668ded3f7f); I havenlt found a Vagrantfile yet...]*
 
+## Commerical Educational Platforms
+
+- [MiRo](https://www.miro-e.com/robot) - commercial, no free demo, not open source.
+
 ## neural  replacement
 
 We also need a replacement for `Neural.exe`
