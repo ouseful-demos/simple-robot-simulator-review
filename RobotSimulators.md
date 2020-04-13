@@ -198,6 +198,13 @@ __Key Considerations__: cross-platform local delivery possible via Docker contai
 
 __TO CHECK__: can you code step through code one block at a time? Is there a data logger / data display? Can the service be proxied through jupyter-server-proxy? If so, multi-user access via VLE auth and JupyterHub would be possible.
 
+### 
+[`iRobot`  *Robot Simulator*](https://code.irobot.com/#/): blockly style editor and simple 2D *Root* robot simulator [[IEEE Spectrum review](https://spectrum.ieee.org/automaton/robotics/home-robots/irobot-launches-robot-simulator-free-online-curriculum-for-robotics-education)].
+
+__Advantages:__ simple 2D simulator;
+
+__Disadvantages:__ geared to kids.
+
 ### Jyro
 
 `Jyro` ([docs](https://jyro.readthedocs.io/en/latest/), [code](https://github.com/Calysto/jyro)) is a simple 2D robot simulator, with a 3D camera view, created by Doug Blank whilst at Bryn Mawr College, implemented in Python. Jyro is desgined to work within Jupyter notebooks (although not currently in JupyterLab).
