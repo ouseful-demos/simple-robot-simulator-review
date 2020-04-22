@@ -513,11 +513,9 @@ Hexapod simulator, viewed in browser via plotly dash, py/numpy on the back end: 
 
 [`mithi/hexapod-robot-simulator`](https://github.com/mithi/hexapod-robot-simulator)
 
-### Simple Tobot Arm Demo
+### Simple Robot Arm Demos
 
-Simple js / borwser based demo of setting robot arm joint angles
-
-[`jaekookang/robot-arm-simple`](https://github.com/jaekookang/robot-arm-simple)
+A very simple js / browser based demo of setting robot arm joint angles can be found at [`jaekookang/robot-arm-simple`](https://github.com/jaekookang/robot-arm-simple). A much richer arm simulator using *three.js* is available at [glumb/robot-gui](https://github.com/glumb/robot-gui) [[demo](http://robot.glumb.de/) and [video](https://www.youtube.com/watch?v=c2uEWyo6dc4)].
 
 ## `Gym` Toolkit
 
