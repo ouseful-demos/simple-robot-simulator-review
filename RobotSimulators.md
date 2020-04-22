@@ -509,9 +509,15 @@ __Disadvantages__: didn't work for me under the free plan; not open source so no
 
 ### Simple Hexapod Simulator
 
-In-browser hexapod simulator: play with joint angles etc...
+Hexapod simulator, viewed in browser via plotly dash, py/numpy on the back end: play with joint angles etc...
 
 [`mithi/hexapod-robot-simulator`](https://github.com/mithi/hexapod-robot-simulator)
+
+### Simple Tobot Arm Demo
+
+Simple js / borwser based demo of setting robot arm joint angles
+
+[`jaekookang/robot-arm-simple`](https://github.com/jaekookang/robot-arm-simple)
 
 ## `Gym` Toolkit
 
