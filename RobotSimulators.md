@@ -507,6 +507,12 @@ __Advantages__: the web based environment provides a range of integrated tools t
 __Disadvantages__: didn't work for me under the free plan; not open source so no immediate way of running a self-hosted version free of any license fee, if at all.
 
 
+### Simple Hexapod Simulator
+
+In-browser hexapod simulator: play with joint angles etc...
+
+[`mithi/hexapod-robot-simulator`](https://github.com/mithi/hexapod-robot-simulator)
+
 ## `Gym` Toolkit
 
 [`Gym`](https://gym.openai.com/) *"is a toolkit for developing and comparing reinforcement learning algorithms"*. It includes several [robot simulations](https://gym.openai.com/envs/#robotics) that frame different reinforcement learning challenges, including a pick and place task and a robot hand manipulation task.
