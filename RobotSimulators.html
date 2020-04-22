@@ -1,0 +1,505 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Robot Simulators &#8212; Robot Simulators Review  documentation</title>
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/language_data.js"></script>
+    <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="Robot Simulators Review" href="index.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  <div class="document">
+    
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="index.html">Robot Simulators Review</a></h1>
+
+
+
+<p class="blurb">Robot simulator review</p>
+
+
+
+
+
+
+<h3>Navigation</h3>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Robot Simulators</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#strategic-concerns">Strategic concerns</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#deployment-concerns">Deployment Concerns</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#content-authoring-and-student-ownership">Content Authoring and Student Ownership</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#tm129-practicals-19j">TM129 Practicals, &lt;= 19J</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#updating-tm129-practical-activities">Updating TM129 Practical Activities</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#software-applications-general-criteria">Software Applications - General Criteria</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#robot-simulators-review">Robot Simulators Review</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#jyro-robot-simulator-in-java-processing">[Jyro] Robot Simulator in Java / Processing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#gym-toolkit"><code class="docutils literal notranslate"><span class="pre">Gym</span></code> Toolkit</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#customising-forking-a-current-environment-or-creating-a-new-bespoke-one">Customising / Forking a Current Environment or Creating a New Bespoke One</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#commercial-platforms">Commercial Platforms</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#commerical-educational-platforms">Commerical Educational Platforms</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#neural-replacement">neural  replacement</a></li>
+</ul>
+</li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="index.html" title="previous chapter">Robot Simulators Review</a></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="robot-simulators">
+<h1>Robot Simulators<a class="headerlink" href="#robot-simulators" title="Permalink to this headline">¶</a></h1>
+<p>Notes on the availability of robot simulators that might be appropriate for revised activities in the <em>TM129 Robotics</em> block.</p>
+<p>A key consideration are the learning objectives surrounding that we require the practical activities to meet.</p>
+<p>Currently (up to and including 19J), TM129 Robotics block practical activities cover teaching elementary programming in the context of a simple 2D simulator, and training a simple neural network via an application with a graphical user interface.</p>
+<p>More generally, learning objectives for the update might include, but not be limited to:</p>
+<ul class="simple">
+<li><p>teaching basic programming <em>in general</em>;</p></li>
+<li><p>teaching some principles of <em>robot programming</em>;</p></li>
+<li><p>demonstrating how simulations can be used to design and test robot control programmes;</p></li>
+<li><p>limitations of simulation compared to real world operation;</p></li>
+<li><p>an example of how virtualisation can be used to support the distribution of, or access to, complex or resource hungry software environments.</p></li>
+</ul>
+<p>With proposed updates to the TM129 Robotics block also suggesting an increased coverage of various AI related topics, potentially including smart systems and conversational agents, we might also be tempted to include:</p>
+<ul class="simple">
+<li><p>teaching basic programming around smart devices and smart sensors;</p></li>
+<li><p>teching basic programming around conversational interactions (eg chatbots, smart speaker skills).</p></li>
+</ul>
+<div class="section" id="strategic-concerns">
+<h2>Strategic concerns<a class="headerlink" href="#strategic-concerns" title="Permalink to this headline">¶</a></h2>
+<p>If other modules across the OU, such as in the Engineering programme, are likely to require the use of a physical world simulator, then it might make sense for TM129 to pick a simulator that would be appropriate for use in such courses.</p>
+<p>This would allow OU educators and developers to gain familiarity in use of the simulator and its deployment. Use across several modules also provides support for developing OU customisations (branding, improving student experience, etc).</p>
+</div>
+<div class="section" id="deployment-concerns">
+<h2>Deployment Concerns<a class="headerlink" href="#deployment-concerns" title="Permalink to this headline">¶</a></h2>
+<p>Making software applications available to OU students, who work at a distance on computers outside of our control, is often challenging.</p>
+<p>The OU policy is that students should have a minimum specification computer (which is set at a very low spacification) and minimum version operating system (which may be very old, and even past its support date) although which operating system is left open; students could use Windows, Mac O/S, Linux, so cross-platform support is required.</p>
+<p>The computer specification does not admit of tablets, phones or netbooks/Chromebooks, although increasingly these may be the only computer the student has access to (in particular, netbooks/Chromebooks).</p>
+<p>Selecting software that runs an HTML over HTTP user interface means that the student only requires a web browser to run software, although some clients may specify particular browsers (such as a recent version of Chrome or Firefox). Desktop applications without an HTML UI can also be accessed via a browser using no-vnc or XPRA web-browser clients, or via cross-platform RDP clients.</p>
+<p>Cross-platform support can conveniently be provided using virtualised applications (OU modules have distributed software to students using both VirtualBox virtual machines and Docker containers) to allow offline running of module software and local file persistence. This has the advantage that the same application software and software environment is provided to all students.</p>
+<p>Some robot simulators are resource intensive, requiring large amounts of memory, particular graphics cards, or GPUs. Application image sizes may also be large, particularly for virtualised applications, requiring a large amount of free disk space prior to installation. (Experience suggests that some students have very little free disk space on their computers.)</p>
+<p>Virtualised environments can be made available to students remotely as well as locally on their own machine (the <em>same</em> environment applying inseide the VM in each case). Whilst this does require students to have an internet connection to the remote application server, their computer only needs to support an internet browser (which means activities could also be completed using netbooks, tablets, or even phones). Challenges to the OU of providing remote access include managing multi-user access and authentication, student personal file persistence and peak load resource provisioning.</p>
+<p>TM112 has recently experimented with hosting a scaleable multi-user JupyterHub service accessed via a VLE module website to deliver a temporary Jupyter notebook activity to students. Students can run activities during a single online session but not save those activities to return to them later. It is quite possible to configure the JupyterHub server to provide persistent student accounts, although this requires additional storage resource. [Currently, there is no precedent for this mode of operation within the OU although many other institutions do offer this sort of personalised service.] The TM112 JupyterHub service serves a potentially user-selectable container instance to a connected user via a scaleable Kubernetes backend. As well as running a Jupyter notebook server UI, the notebook server can proxy other HTTP/HTML user interfaces (for example, running <a class="reference external" href="https://github.com/jupyterhub/jupyter-rsession-proxy">RStudio via a proxy</a>), including remote desktops exposed via no-vnc (for example, <a class="reference external" href="https://github.com/yuvipanda/jupyter-desktop"><code class="docutils literal notranslate"><span class="pre">jupyter-desktop</span></code></a>). JupyterHub can thus be used to provide authenticated multi-user access to arbitrary, personal, containerised applications other than Jupyter notebooks, albeit proxied by the personal notebook server running in the container.</p>
+</div>
+<div class="section" id="content-authoring-and-student-ownership">
+<h2>Content Authoring and Student Ownership<a class="headerlink" href="#content-authoring-and-student-ownership" title="Permalink to this headline">¶</a></h2>
+<p>As well as issues associated with distributing software to students in general, we should also consider how we both <em>author</em> the instructional material associated with software activities and deliver it as instructional material to students.</p>
+<p>The traditional OU model is to produce instructional material for delivery as print material or via the VLE. That material is typically authored in Microsoft Word, converted to OU-XML, then rendered to PDF/print or HTML for the VLE.</p>
+<p>One advantage of the print material route for students is that can keep a copy of the material forever (or resell it!), another is that they can take ownership of the material by annotating it.</p>
+<p>Whilst academic instructional material associated with TM351 was pubished as VLE based instrictional material,  the content associated with practical activities (data management and analysis using Python) was delivered as narrative style Jupyter notebooks embedding practical code activities inline.</p>
+<p>Jupyter notebooks were downloaded by students from the VLE, at which point they took ownership of them in two senses:</p>
+<ol class="simple">
+<li><p>by running the notebooks in a virtual machine on their own computer;</p></li>
+<li><p>by being able to edit and save changes to the notebooks (i.e. to annotate them).</p></li>
+</ol>
+<p>As well as running Jupyter notebooks <em>as notebooks</em>, publishing mechanisms also exist for publishing HTML pages that can execute inline code against a remote server. An example can be seen here: <a class="reference external" href="#">executing inline code in an HTML page against a remote server</a>.</p>
+<p><img alt="_images/" src="_images/" /></p>
+<p>This means that “static interactive” materials could be delivered to students via the VLE that would allow them to run exercises within the VLE HTML webpage context, change the code and execure it, <em>but not save their code</em>. (The activities thus become “temporary” or ephemeral.)</p>
+<p>When it comes to authoring such material, there are several options:</p>
+<ol class="simple">
+<li><p>Authoring in Jupyter notebooks using the Jupyter notebook user interface;</p></li>
+<li><p>Authoring in markdown and using Jupytext to convert the materials into the Jupyter notebook format as well as allowing the markdown to be edited within a Jupyter notebook environment;</p></li>
+<li><p>Authoring notebooks using an alternative notebook editor, such as Polynote (which has a friendly WYSIWYG text editing enviroment).</p></li>
+</ol>
+<p><img alt="Polynote" src="_images/polynote.png" /></p>
+<p>TM129 was always claimed to provide a module format that would support innovation and updating over short timescales, with potentially hot swappable 10 point blocks that could be rapidly updated and replaced, an opportunity was squandered right from the start. With the update to the robotics block, we do have an opportunity to explore new production, delivery workflows and potentially even pedagogical styles, in the context of producing and delivering interactive practical activity course materials.</p>
+<p>I have also argued previously that there are opportunities for separate blocks to scaffold each other, for example in the context of virtualisation, where one block could look at the rationale for and implementation of virtualised services, with another block using virtualisation to deliver one or more services in contexts that demonstrate why virtualisation is appropriate. For example, we could deliver a light docker environment to students running a simple Python simulator whilst also giving them a limited experience of a fully featured simulator running on a powerful, GPU enabled remote server.</p>
+<p>Providing students with some practical experience in setting up and running virtualised services could simplify a lot of our software delivery issues and enable students to run a wider range of services for themselves both inside and outside the OU. The blockers to OU adoption come from IT and LTI, who won’t engage in looking for strategic ways to deliver virtualised services and benefit from them and from academics, who have no idea what virtualisation is or why it might be useful, let alone how we might go about making use of it. Finance would also probably have something to say about paying for any remote hosting, but it would then be down to us to demonstrate that it would generate effiencies elsewhere, eg in terms of production, maintenance and support and improved retention, and intangibles like a better student experience and improved opportunities for developing engaging and meaningful interactive activities.</p>
+<p>Each module arguing separately for support for virtualised services means we are already divided and con	quered. We need a strategic institutional play. But in absence of that, as separate modules, we can try to set precendents and can try to obtain jigsaw pieces that may be of benefit to other modules. We have to finagle a strategy from tactics.</p>
+</div>
+<div class="section" id="tm129-practicals-19j">
+<h2>TM129 Practicals, &lt;= 19J<a class="headerlink" href="#tm129-practicals-19j" title="Permalink to this headline">¶</a></h2>
+<p>TM129 provides practical experience in simple robot programming using the <code class="docutils literal notranslate"><span class="pre">RobotLab</span></code> 2D simulator, originally developed for T184.</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">RobotLab</span></code> simulator provides a text based drag and drop or click-to-insert interface that allows syntactically correct text programmes to be developed through interactions with a text command palette.</p>
+<p><img alt="RobotLab screenshot" src="_images/robotlab_1.png" /></p>
+<p>Programmes are used to control a simple differential drive robot, with trace, in a graphical 2D simulator. Programmes may be run to completion or stepped through a line at a time.</p>
+<p>As well as providing a simple simulation environment, <code class="docutils literal notranslate"><span class="pre">RobotLab</span></code> could also control a physical Lego robot via the Lego Mindstorms RCX brick, providing students who had access to such a robot with the ability to run their programs in both the provided simulator and on their own robot.</p>
+<p><code class="docutils literal notranslate"><span class="pre">RobotLab</span></code> was originally built as a Windows desktop application. Cross-platform support is currently provided using <em>PlayOnMac</em> and <em>Wine</em> runtimes. Experimental support for virtualised distribution locally or via a remote websrvice has also been explored.</p>
+<p>A simple graphical neural network application, <code class="docutils literal notranslate"><span class="pre">Neural</span></code>, originally developed as a Windows application for a module prior even to T184, is also currently used on TM129. <code class="docutils literal notranslate"><span class="pre">Neural</span></code> provides a graphical user interface for training simple, customisable neural networks.</p>
+</div>
+<div class="section" id="updating-tm129-practical-activities">
+<h2>Updating TM129 Practical Activities<a class="headerlink" href="#updating-tm129-practical-activities" title="Permalink to this headline">¶</a></h2>
+<p>The proposed revisions to TM129 place an increased emphasis on AI and modern machine learning architectures. Trends in robotics research and development also demonstrate increased reliance on the use of powerful simulations during the development and testing of robotic systems.</p>
+<p><code class="docutils literal notranslate"><span class="pre">RobotLab</span></code> has aged well as a simple and effective instructional programming environment in terms of its user interface design. However, providing ongoing support of this 20 year old application is increasingly an issue, although virtualised offerings might be able mitigate against student software installation issues.</p>
+<p>The planned revision of TM129 provides an opportunity to overhaul the practical activities in the robotics module. There are several avenues we might explore when choosing applications or environments to replace the original <code class="docutils literal notranslate"><span class="pre">RobotLab</span></code> and <code class="docutils literal notranslate"><span class="pre">Neural</span></code> applications:</p>
+<ul class="simple">
+<li><p>demonstrating the use of powerful 3D simulators that might be used in other modules in the engineering and science qualification pathways, including project modules and Masters level modules;</p></li>
+<li><p>demonstrating the remote hosting and delivery to students of web applications with computing requirements that exceed the OU minimum specification computing requirements (for example, in terms of memory, GPU requirement, etc). (The in-production module <em>TM358 Machine Learning</em> is likely to have a GPU requirement for training deep learning models.)</p></li>
+<li><p>using open source environments that are used in other modules and as such contribute additional development and support focussed resource into any required necessary customisations, particularly on grounds of accessibility, branding, etc.</p></li>
+</ul>
+<p>Note that when considering environments, we require three components:</p>
+<ol class="simple">
+<li><p>A <code class="docutils literal notranslate"><span class="pre">programming</span> <span class="pre">environment</span></code> for programming simulated robots;</p></li>
+<li><p>A <code class="docutils literal notranslate"><span class="pre">programming</span> <span class="pre">language</span></code> that can be used within the <code class="docutils literal notranslate"><span class="pre">programming</span> <span class="pre">environment</span></code> and that can control simulated robots in the <code class="docutils literal notranslate"><span class="pre">simulation</span> <span class="pre">environment</span></code>;</p></li>
+<li><p>A <code class="docutils literal notranslate"><span class="pre">simulation</span> <span class="pre">environment</span></code> for visualising the effect of programmed control of simulated robots.</p></li>
+</ol>
+<p>In some cases, the same application may meet <em>all three</em> requirements in a tightly coupled / integrated way. In others, it may be possible to decouple the programming environment and language from the simulation environment, or loosely embed a simulation environment within the context of the programming environment.</p>
+<p>If the module revisions extends to practical activities that include programming conversational agents, it would be useful same programing environment could be used to programme the robot simulator as well as the conversational agents.</p>
+</div>
+<div class="section" id="software-applications-general-criteria">
+<h2>Software Applications - General Criteria<a class="headerlink" href="#software-applications-general-criteria" title="Permalink to this headline">¶</a></h2>
+<p>The simulators and development environments were identified on the basis of web searches for applications that meet one or more of the following criteria:</p>
+<ul class="simple">
+<li><p>open source [<code class="docutils literal notranslate"><span class="pre">REQUIRED</span></code>]</p></li>
+<li><p>Python code base [<code class="docutils literal notranslate"><span class="pre">DESIRABLE</span></code>]</p></li>
+<li><p>browser based UI (supports web delivery) [<code class="docutils literal notranslate"><span class="pre">DESIRABLE</span></code>]</p></li>
+<li><p>cross-platform support (for software distributed to students, this is [<code class="docutils literal notranslate"><span class="pre">REQUIRED</span></code>]; for software delivered remotely via a web UI or RDP, this is [<code class="docutils literal notranslate"><span class="pre">OPTIONAL</span></code>])</p></li>
+<li><p>runs on OU min spec computers (for software distributed to students, this is [<code class="docutils literal notranslate"><span class="pre">REQUIRED</span></code>]; for software delivered remotely via a web UI or RDP, this is [<code class="docutils literal notranslate"><span class="pre">OPTIONAL</span></code>])</p></li>
+<li><p>interoperable simulator and programming environments [<code class="docutils literal notranslate"><span class="pre">REQUIRED</span></code>]</p></li>
+<li><p>support for simulated robot models that correspond to real world robots that could be controlled directly in the real world rather than just in the simulator [<code class="docutils literal notranslate"><span class="pre">DESIRABLE</span></code>]</p></li>
+<li><p>support for simulated models of Lego EV3 (as used in OU residential school activities) and Baxter robots (as available in the Remote STEM Lab) [<code class="docutils literal notranslate"><span class="pre">DESIRABLE</span></code>]</p></li>
+</ul>
+<p>Suggestions regarding other openly available programming environments and simulators are welcome.</p>
+</div>
+<div class="section" id="robot-simulators-review">
+<h2>Robot Simulators Review<a class="headerlink" href="#robot-simulators-review" title="Permalink to this headline">¶</a></h2>
+<p>The following (brief) review is not necessarily comprehensive.</p>
+<p><em>Suggestions for alternative applications / environments are welcome.</em></p>
+<div class="section" id="python-turtle-ipyturtle">
+<h3>Python Turtle / ipyturtle<a class="headerlink" href="#python-turtle-ipyturtle" title="Permalink to this headline">¶</a></h3>
+<p>The Python programming language comes with an implementation of a 2D turtle, often used to teach elementary programming. (Indeed, a python turtle is used to introduce Python programming in TM112.)</p>
+<p>The native Python turtle runs in a pop-up Tk window although python packages to provide a turtle canvas in Jupyter notebooks (<a class="reference external" href="https://github.com/gkvoelkl/ipython-turtle-widget"><code class="docutils literal notranslate"><span class="pre">ipython-turtle-widget</span></code></a>) and JupyterLab (<a class="reference external" href="https://github.com/dirkcgrunwald/jupyterlab-turtlegraphics"><code class="docutils literal notranslate"><span class="pre">jupyterlab-turtlegraphics</span></code></a>, although not (yet?) supported for recent versions of JupyterLab).</p>
+<p><img alt="ipyturtle in Jupyter notebook" src="_images/ipyturtle.png" /></p>
+<p>A demo script for the <code class="docutils literal notranslate"><span class="pre">ipyturtle</span></code> widget can be found <a class="reference external" href="https://github.com/ouseful-demos/simple-robot-simulator-review/blob/master/demos/ipyturtle_demo.ipynb">here</a> and tried here: <a class="reference external" href="https://mybinder.org/v2/gh/ouseful-demos/simple-robot-simulator-review/master?filepath=demos/ipyturtle_demo.ipynb"><img alt="Binder" src="https://mybinder.org/badge_logo.svg" /></a></p>
+<p>Whilst turtles can be used to teach simple open loop styling programming, there is no sensory feedback so sensor mediated closed loop control within a simulated environment is not possible.</p>
+<p>However, a turtle environment may be appropriate as an engagement tool for TM129, introducing students to the idea of controlling a turtle through simple motor commands and then teasing: “but what if the turtle could also <em>sense</em> its environment and act accordingly?”</p>
+</div>
+<div class="section" id="open-robertalab">
+<h3>Open RobertaLab<a class="headerlink" href="#open-robertalab" title="Permalink to this headline">¶</a></h3>
+<p><em>Open RobertaLab</em>  is a blocky style graphical interface that can be used to programme several robot types and simple electronics development boards. An in-built 2D simulator is provided for some of the robot models, including the Lego EV3.</p>
+<p><em>Open RobertaLab</em> is accessed via a web browser and runs as an online hosted environment. You can <a class="reference external" href="https://lab.open-roberta.org/">try <em>Open RobertaLab</em> online here</a>.</p>
+<p><img alt="Open Roberta Lab screenshot" src="_images/open_roberta_lab_2.png" /></p>
+<p>There is the ability to look at Python script generated from the blocks view, although not edit it.</p>
+<p><img alt="Open Roberta Lab screenshot (code)" src="_images/open_roberta_lab_3.png" /></p>
+<p>Available sensor types in the RoboSim (EV3basis) include a touch sensor, ultrasound (distance) sensor, colour sensor, infrared sensor (distance, presence), gyroscope and timer. Sensor types and motors are configurable.</p>
+<p><img alt="Open Roberta Lab - robot configurator" src="_images/roberta_1.png" /></p>
+<p>Several simulator environments are provided as default, and custom simulator environments can be created, Environments can include coloured traces on the simulator floor and objects in the plane of the robot sensors that are sensed by the ultrasound sensor, for example.</p>
+<p><img alt="Open Roberta Lab - simulated world" src="_images/Open_Roberta_Lab_0.png" /></p>
+<p>The code is openly licensed [<a class="reference external" href="https://github.com/OpenRoberta/openroberta-lab">repo</a>] and could be hosted institutionally, or students could download it and run it themselves, for example via a containerised application.</p>
+<p>You can try it out here: <a class="reference external" href="https://lab.open-roberta.org/">Open Roberta Lab online</a>.</p>
+<p>You can run a local version of <em>Open RobertaLab</em> under Docker using the following command:</p>
+<p><code class="docutils literal notranslate"><span class="pre">docker</span> <span class="pre">run</span> <span class="pre">--rm</span> <span class="pre">-d</span>&#160; <span class="pre">-p</span> <span class="pre">1999:1999</span> <span class="pre">--name</span> <span class="pre">robertalab_demo</span> <span class="pre">ousefuldemos/robertalab</span></code></p>
+<p>The service will be available on <code class="docutils literal notranslate"><span class="pre">localhost:1999</span></code>.</p>
+<p>An OU fork of the blockly style <em>Scratch</em> environment (<em>OU Build</em>) is already being used in one of the new first level courses to introduce basic programming, so the blocks style environment is one that students will see elsewhere, albeit in a rather simplistic fashion.</p>
+<p><strong>Advantages:</strong> simple 2D simulator has much of the feel of RobotLearn; converting current RobotLab activities to Open Roberta Lab activities should in large part be possible; browser based; more senosrs available for use in simulator than RobotLab.</p>
+<p><strong>Disadvantages</strong>: accessibility may be an issue; blocks editor does not allow text-based programming / editing, although inpsection of autmoatically generated equivalent code is possible.</p>
+<p>As well as the simple robot programming environment, Open Roberta Lab can be used to programme some simple development boards, such as an Arduino, Senseboard or <a class="reference external" href="https://www.bob3.org/en/">BOB3</a> board, directly, or as with the <a class="reference external" href="https://microbit.org/">Microbit</a>, directly <em>or</em> in simulation.</p>
+<p><strong>Key Considerations</strong>: cross-platform local delivery possible via Docker container;</p>
+<p><strong>TO CHECK</strong>: can you code step through code one block at a time? Is there a data logger / data display? Can the service be proxied through jupyter-server-proxy? If so, multi-user access via VLE auth and JupyterHub would be possible.</p>
+</div>
+<div class="section" id="id1">
+<h3><a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+<p><a class="reference external" href="https://code.irobot.com/#/"><code class="docutils literal notranslate"><span class="pre">iRobot</span></code>  <em>Robot Simulator</em></a>: blockly style editor and simple 2D <em>Root</em> robot simulator [<a class="reference external" href="https://spectrum.ieee.org/automaton/robotics/home-robots/irobot-launches-robot-simulator-free-online-curriculum-for-robotics-education">IEEE Spectrum review</a>].</p>
+<p><strong>Advantages:</strong> simple 2D simulator;</p>
+<p><strong>Disadvantages:</strong> geared to kids.</p>
+</div>
+<div class="section" id="jyro">
+<h3>Jyro<a class="headerlink" href="#jyro" title="Permalink to this headline">¶</a></h3>
+<p><code class="docutils literal notranslate"><span class="pre">Jyro</span></code> (<a class="reference external" href="https://jyro.readthedocs.io/en/latest/">docs</a>, <a class="reference external" href="https://github.com/Calysto/jyro">code</a>) is a simple 2D robot simulator, with a 3D camera view, created by Doug Blank whilst at Bryn Mawr College, implemented in Python. Jyro is desgined to work within Jupyter notebooks (although not currently in JupyterLab).</p>
+<p>The base simulated robot is based on a Pioneer differential drive robot. It can be configured with ultrasound sensors around the robot, a forward facing camera and forward facing light sensors.</p>
+<p>A gripper can also be attached to the robot, and a class exists to define a puck that can presumably be collected by the robot, but I haven’t yet managed to find a demo of this working or create one myself.</p>
+<p><img alt="Jyro Pioneer with attachments" src="_images/Jyro_demo2.png" /></p>
+<p>The world is defined as a wall bounded square area with user-defined floow and wall coours, containing user defined coloured boxes of arbitrary size.</p>
+<p><img alt="Jyro visual simualtor view" src="_images/Jyro_demo.png" /></p>
+<p>Lines and other coloured markers cannot be placed on the floor of the simulator (this would presumably complicate the robot’s  camera view of the world), nor is there currently support for a downward facing light sensor. It might be possible to contive a downward facing light sensor that can be seen in the plan view of the world, and from a downward facing light sensor, but mask this from the 3D camera view.</p>
+<p>When a control programme is associated with the <code class="docutils literal notranslate"><span class="pre">.brain</span></code> of the robot and the simulator play button pressed, the simulator loop runs and the robot behaves in accord with its programmed actions.</p>
+<p>The following programme fragment demonstrates a simple control programme with data logging into a <code class="docutils literal notranslate"><span class="pre">pandas</span></code> dataframe enabled. The simulator runs in its own control loop inside a widget, with the robot’s state mirrored in the notebook kernel. This means that robot sensor data can be collected from the simulator widget and displayed within the notebook, even as the simulator is running.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="kn">as</span> <span class="nn">pd</span>
+
+<span class="n">df_log</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">()</span>
+
+<span class="k">def</span> <span class="nf">avoidObstacleLogged</span><span class="p">(</span><span class="n">robot</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot; Turn right if there&#39;s an obstacle close ahead, else go straight. &quot;&quot;&quot;</span>
+    <span class="k">global</span> <span class="n">df_log</span>
+    
+    <span class="n">sonars</span> <span class="o">=</span> <span class="n">robot</span><span class="p">[</span><span class="s2">&quot;sonar&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">getData</span><span class="p">()</span>
+    <span class="n">front</span> <span class="o">=</span> <span class="nb">min</span><span class="p">(</span><span class="n">sonars</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="mi">7</span><span class="p">])</span>
+    <span class="k">if</span> <span class="n">front</span> <span class="o">&lt;</span> <span class="mf">0.5</span><span class="p">:</span>           <span class="c1"># check for an obstacle</span>
+        <span class="n">robot</span><span class="o">.</span><span class="n">move</span><span class="p">(</span><span class="mf">0.0</span><span class="p">,</span> <span class="o">-</span><span class="mf">1.0</span><span class="p">)</span> <span class="c1"># stop and turn right</span>
+        <span class="n">df_log</span> <span class="o">=</span> <span class="n">df_log</span><span class="o">.</span><span class="n">append</span><span class="p">({</span><span class="s1">&#39;dist&#39;</span><span class="p">:</span><span class="n">front</span><span class="p">,</span> <span class="s1">&#39;action&#39;</span><span class="p">:</span><span class="s1">&#39;turn&#39;</span><span class="p">},</span> <span class="n">ignore_index</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">sort</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">robot</span><span class="o">.</span><span class="n">move</span><span class="p">(</span><span class="mf">1.0</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>    <span class="c1"># otherwise go straight</span>
+        <span class="n">df_log</span> <span class="o">=</span> <span class="n">df_log</span><span class="o">.</span><span class="n">append</span><span class="p">({</span><span class="s1">&#39;dist&#39;</span><span class="p">:</span><span class="n">front</span><span class="p">,</span> <span class="s1">&#39;action&#39;</span><span class="p">:</span><span class="s1">&#39;straight&#39;</span><span class="p">},</span> <span class="n">ignore_index</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">sort</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+        
+<span class="n">robot</span><span class="o">.</span><span class="n">brain</span> <span class="o">=</span> <span class="n">avoidObstacleLogged</span>
+</pre></div>
+</div>
+<p>It would be useful to explore the extent to which a straming dataframes and/or streaming charts mught be able to display sensor data in real time as it runs.</p>
+<p>Another avenue to explore would be the use of Voilà style dashboards to display simulator and live telemetry chart views over predefined worlds and robot control programs.</p>
+<p>A “headless” simulator is also available for running multiple experiments in the same world in order to collect data.</p>
+<p>A demo script for the  <code class="docutils literal notranslate"><span class="pre">Jyro</span></code> simulator can be found <a class="reference external" href="https://github.com/ouseful-demos/simple-robot-simulator-review/blob/master/demos/Jyro_demo.ipynb">here</a> and tried here: <a class="reference external" href="https://mybinder.org/v2/gh/ouseful-demos/simple-robot-simulator-review/master?filepath=demos/Jyro_demo.ipynb"><img alt="Binder" src="https://mybinder.org/badge_logo.svg" /></a></p>
+<p><strong>Advantages</strong>: Python, visual simulator, good Jupyter notebook integration, user-definable world, configurable robot with useful sensors, simple world physics, datalogging ability.</p>
+<p><strong>Disadvantages</strong>: can lose sight of visual simulator when scrolling notebook; no floor marks or sensing of floor marks; default <code class="docutils literal notranslate"><span class="pre">.move</span></code> semantics take some thinking about when applied together. No code stepper (not sure how that would/could be managed?)</p>
+<p><strong>To explore:</strong> potential for mutlirobot and/or puck moving activities? Streaming data log charts? Getting the robot to speak.</p>
+</div>
+</div>
+<div class="section" id="jyro-robot-simulator-in-java-processing">
+<h2>[Jyro] Robot Simulator in Java / Processing<a class="headerlink" href="#jyro-robot-simulator-in-java-processing" title="Permalink to this headline">¶</a></h2>
+<p>A port (I think?) of the Jyro simulator to Java / Processing, again by Doug Blank (via an example <a class="reference external" href="https://jupyter.brynmawr.edu/services/public/dblank/CS110%20Intro%20to%20Computing/2017-Spring/Lectures/Robot%20Control.ipynb">here</a>).</p>
+<p>The simulator works in a Jupyter notebook running a <code class="docutils literal notranslate"><span class="pre">processing</span></code> kernel.</p>
+<p>As with Jyro, worlds can be configured and rendered in a notebook output cell. Once again, a plan view and a robot’s POV are displayed in the simulator.</p>
+<p><img alt="Jyro in Java / Processing simulator view" src="_images/Robot_Control_-_processing.png" /></p>
+<p>A text area display within the simulator view can be scripted via the robot definition.</p>
+<p>The robot is programmed by subclassing a <code class="docutils literal notranslate"><span class="pre">Robot</span></code> class and adding a <code class="docutils literal notranslate"><span class="pre">brain()</span></code>:</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">class</span> <span class="nc">MyRobot</span> <span class="kd">extends</span> <span class="n">Robot</span> <span class="o">{</span>
+    <span class="n">MyRobot</span><span class="o">(</span><span class="kt">float</span> <span class="n">x</span><span class="o">,</span> <span class="kt">float</span> <span class="n">y</span><span class="o">,</span> <span class="kt">float</span> <span class="n">r</span><span class="o">)</span> <span class="o">{</span>
+        <span class="kd">super</span><span class="o">(</span><span class="n">x</span><span class="o">,</span> <span class="n">y</span><span class="o">,</span> <span class="n">r</span><span class="o">);</span>
+        <span class="k">this</span><span class="o">.</span><span class="na">state</span> <span class="o">=</span> <span class="s">&quot;start turn left&quot;</span><span class="o">;</span>
+    <span class="o">}</span>
+
+    <span class="kt">void</span> <span class="nf">brain</span><span class="o">()</span> <span class="o">{</span>
+        <span class="n">PImage</span> <span class="n">pic</span> <span class="o">=</span> <span class="k">this</span><span class="o">.</span><span class="na">takePicture</span><span class="o">();</span>
+        <span class="c1">// Show pic on canvas:</span>
+        <span class="n">image</span><span class="o">(</span><span class="n">pic</span><span class="o">,</span> <span class="mi">500</span> <span class="o">-</span> <span class="mi">256</span><span class="o">,</span> <span class="mi">250</span><span class="o">);</span>
+        <span class="n">fill</span><span class="o">(</span><span class="mi">0</span><span class="o">);</span>
+        <span class="n">text</span><span class="o">(</span><span class="s">&quot;getIR(0): &quot;</span> <span class="o">+</span> <span class="n">nf</span><span class="o">(</span><span class="k">this</span><span class="o">.</span><span class="na">getIR</span><span class="o">(</span><span class="mi">0</span><span class="o">),</span> <span class="mi">1</span><span class="o">,</span> <span class="mi">4</span><span class="o">),</span> <span class="mi">0</span><span class="o">,</span> <span class="mi">265</span><span class="o">);</span>
+        <span class="n">text</span><span class="o">(</span><span class="s">&quot;getIR(1): &quot;</span> <span class="o">+</span> <span class="n">nf</span><span class="o">(</span><span class="k">this</span><span class="o">.</span><span class="na">getIR</span><span class="o">(</span><span class="mi">1</span><span class="o">),</span> <span class="mi">1</span><span class="o">,</span> <span class="mi">4</span><span class="o">),</span> <span class="mi">0</span><span class="o">,</span> <span class="mi">280</span><span class="o">);</span>
+        <span class="n">text</span><span class="o">(</span><span class="s">&quot;stalled: &quot;</span> <span class="o">+</span> <span class="k">this</span><span class="o">.</span><span class="na">stalled</span><span class="o">,</span> <span class="mi">0</span><span class="o">,</span> <span class="mi">295</span><span class="o">);</span>
+        <span class="n">text</span><span class="o">(</span><span class="s">&quot;state: &quot;</span> <span class="o">+</span> <span class="k">this</span><span class="o">.</span><span class="na">state</span><span class="o">,</span> <span class="mi">0</span><span class="o">,</span> <span class="mi">310</span><span class="o">);</span>
+        <span class="n">text</span><span class="o">(</span><span class="s">&quot;time: &quot;</span> <span class="o">+</span> <span class="k">this</span><span class="o">.</span><span class="na">time</span><span class="o">,</span> <span class="mi">0</span><span class="o">,</span> <span class="mi">325</span><span class="o">);</span>
+        
+        <span class="c1">// brain:</span>
+        
+        <span class="kt">float</span> <span class="n">speed</span> <span class="o">=</span> <span class="mf">3.0</span><span class="o">;</span>
+        <span class="k">if</span> <span class="o">(</span><span class="k">this</span><span class="o">.</span><span class="na">state</span> <span class="o">==</span> <span class="s">&quot;backward&quot;</span><span class="o">)</span> <span class="o">{</span>
+            <span class="k">if</span> <span class="o">(</span><span class="k">this</span><span class="o">.</span><span class="na">stalled</span><span class="o">)</span> <span class="o">{</span>
+                <span class="k">this</span><span class="o">.</span><span class="na">state</span> <span class="o">=</span> <span class="s">&quot;forward&quot;</span><span class="o">;</span>
+                <span class="k">this</span><span class="o">.</span><span class="na">forward</span><span class="o">(</span><span class="n">speed</span><span class="o">);</span>
+            <span class="o">}</span> <span class="k">else</span> <span class="o">{</span>
+                <span class="k">this</span><span class="o">.</span><span class="na">backward</span><span class="o">(</span><span class="n">speed</span><span class="o">);</span>
+            <span class="o">}</span>
+        <span class="o">}</span> <span class="k">else</span> <span class="k">if</span> <span class="o">(</span><span class="k">this</span><span class="o">.</span><span class="na">state</span> <span class="o">==</span> <span class="s">&quot;forward&quot;</span><span class="o">)</span> <span class="o">{</span>
+            <span class="k">if</span> <span class="o">(</span><span class="k">this</span><span class="o">.</span><span class="na">stalled</span><span class="o">)</span> <span class="o">{</span>
+                <span class="k">this</span><span class="o">.</span><span class="na">state</span> <span class="o">=</span> <span class="s">&quot;backward&quot;</span><span class="o">;</span>
+                <span class="k">this</span><span class="o">.</span><span class="na">backward</span><span class="o">(</span><span class="n">speed</span><span class="o">);</span>
+            <span class="o">}</span> <span class="k">else</span> <span class="o">{</span>
+                <span class="k">this</span><span class="o">.</span><span class="na">forward</span><span class="o">(</span><span class="n">speed</span><span class="o">);</span>
+            <span class="o">}</span>
+        <span class="o">}</span> <span class="k">else</span> <span class="k">if</span> <span class="o">(</span><span class="k">this</span><span class="o">.</span><span class="na">state</span> <span class="o">==</span> <span class="s">&quot;start turn left&quot;</span><span class="o">)</span> <span class="o">{</span>
+            <span class="k">this</span><span class="o">.</span><span class="na">time</span> <span class="o">=</span> <span class="mi">62</span><span class="o">;</span>
+            <span class="k">this</span><span class="o">.</span><span class="na">state</span> <span class="o">=</span> <span class="s">&quot;turn left&quot;</span><span class="o">;</span>
+        <span class="o">}</span> <span class="k">else</span> <span class="k">if</span> <span class="o">(</span><span class="k">this</span><span class="o">.</span><span class="na">state</span> <span class="o">==</span> <span class="s">&quot;turn left&quot;</span><span class="o">)</span> <span class="o">{</span>
+            <span class="k">if</span> <span class="o">(</span><span class="k">this</span><span class="o">.</span><span class="na">time</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="o">)</span> <span class="o">{</span>
+                <span class="k">this</span><span class="o">.</span><span class="na">turn</span><span class="o">(</span><span class="mi">0</span><span class="o">);</span>
+                <span class="k">this</span><span class="o">.</span><span class="na">state</span> <span class="o">=</span> <span class="s">&quot;forward&quot;</span><span class="o">;</span>
+            <span class="o">}</span> <span class="k">else</span> <span class="o">{</span>
+                <span class="k">this</span><span class="o">.</span><span class="na">turn</span><span class="o">(</span><span class="mf">.05</span><span class="o">);</span>
+                <span class="k">this</span><span class="o">.</span><span class="na">time</span> <span class="o">-=</span> <span class="mi">1</span><span class="o">;</span>
+            <span class="o">}</span>
+        <span class="o">}</span> <span class="k">else</span> <span class="k">if</span> <span class="o">(</span><span class="k">this</span><span class="o">.</span><span class="na">state</span> <span class="o">==</span> <span class="s">&quot;turn right&quot;</span><span class="o">)</span> <span class="o">{</span>
+            <span class="k">this</span><span class="o">.</span><span class="na">turn</span><span class="o">(-</span><span class="mf">.05</span><span class="o">);</span>
+        <span class="o">}</span> <span class="k">else</span> <span class="k">if</span> <span class="o">(</span><span class="k">this</span><span class="o">.</span><span class="na">state</span> <span class="o">==</span> <span class="s">&quot;stop&quot;</span><span class="o">)</span> <span class="o">{</span>
+            <span class="c1">//this.stop();</span>
+        <span class="o">}</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</pre></div>
+</div>
+<p>The <code class="docutils literal notranslate"><span class="pre">move</span></code> command semantics resemble those of Jyro (forward/backward translation and a turn component) although managed slightly differently in example programmes by specifying a natual language move <code class="docutils literal notranslate"><span class="pre">state</span></code> and then implementing motion commands via <code class="docutils literal notranslate"><span class="pre">.forward()</span></code>, <code class="docutils literal notranslate"><span class="pre">.backward()</span></code> and <code class="docutils literal notranslate"><span class="pre">.turn()</span></code> methods.</p>
+<p><strong>Advantages</strong>: runs in a Jupyter notebook with an appropriate kernel; the simulator feels a bit more fluid in the way it renders the world than the original <em>Jyro</em> simulator. The availability of processing means that extending graphics / animation features is probably ripe for possibilities.</p>
+<p><strong>Disadvantages</strong>: Java…</p>
+<p>A demo script for the Java/Processing port of the <code class="docutils literal notranslate"><span class="pre">Jyro</span></code> simulator can be found <a class="reference external" href="https://github.com/ouseful-demos/simple-robot-simulator-review/blob/master/demos/Jyro_processing_port_demo.ipynb">here</a> and tried here: <a class="reference external" href="https://mybinder.org/v2/gh/ouseful-demos/simple-robot-simulator-review/master?filepath=demos/Jyro_processing_port_demo.ipynb"><img alt="Binder" src="https://mybinder.org/badge_logo.svg" /></a></p>
+<div class="section" id="ev3devsim">
+<h3>Ev3devSim<a class="headerlink" href="#ev3devsim" title="Permalink to this headline">¶</a></h3>
+<p><em>Ev3devSim</em> [<a class="reference external" href="https://github.com/QuirkyCort/ev3dev-sim">repo</a>] is a purely browser based simulator that can be run using a local webserver.</p>
+<p><img alt="Ev3dev simulator" src="_images/EV3DEV_Python_Simulator.png" /></p>
+<p><img alt="Ev3dev robot config" src="_images/EV3DEV_Python_Simulator2.png" /></p>
+<p>Try out a <a class="reference external" href="https://www.aposteriori.com.sg/Ev3devSim/index.html">live demo here</a>.</p>
+<p>The application can also be run within MyBinder proxied via <code class="docutils literal notranslate"><span class="pre">jupyer-server-proxy</span></code> <strong>[demo to follow…]</strong>.</p>
+<p>Colour, gyro and ultrasonic sensors are available, with two colour sensors mounted by default at the front of the simualted robot. The motors are either independently controlled or ganged (<em>moveTank</em>, <em>moveSteering</em>) and are either running at a specified percentage level or they are stopped. When motors are turned off, the robot stops instantly.</p>
+<p><strong>Advantages</strong>: purely browser based; custom commands can be added via Skulpt parser somehow?</p>
+<p><strong>Disadvantages</strong>: limited instructional commands?  [I haven’t made a chance / time to ry out some of the activities yet…]</p>
+<p><strong>To explore</strong>: the developers of another blockly style environment, <em>BlockPy</em>, are currently developing an editor, <a class="reference external" href="https://github.com/blockpy-edu/BlockMirror"><em>BlockMirror</em></a> that provides <em>“[a]n interface for dual block/text representation with Blockly”</em>. The <em>BlockMirror</em> editor embeds the <em>Skulpt</em> parser (as does <em>Ev3devSim</em>) and allows the user to toggle between block and code views: editing one view is reflected by changes to the other. I wonder how easy it would be to use <em>BlockMirror</em> as the editor within <em>Ev3devSim</em>? (I have filed an <a class="reference external" href="https://github.com/QuirkyCort/ev3dev-sim/issues/3">issue</a> to the original <code class="docutils literal notranslate"><span class="pre">ev3dev-sim</span></code> repo related to this.) It should be easy enough to package <em>Ev3devSim</em> for cross-platform use as an electron application. I also wonder about how easy it would be to separate out the components of <em>ev3dev-sim</em> and run it inside a Jupyter notebook (or JupyterLab) using a <a class="reference external" href="https://github.com/Calysto/skulpt_python"><em>Skulpt</em> kernel</a>. Something else that might be worth exploring is whether the simulator could be integrated into BlockPy, allowing that environment to be used for blocks or text based programming in a data or robotics context; the robotics simulator might also provide data for visualising/analysing in the data science context? [Here’s a related <a class="reference external" href="https://github.com/blockpy-edu/blockpy/issues/78">issue</a>.]</p>
+<p>????Maybe also https://github.com/ev3dev/ev3dev-lang-python/issues/264#issuecomment-530658432</p>
+</div>
+<div class="section" id="webots">
+<h3>Webots<a class="headerlink" href="#webots" title="Permalink to this headline">¶</a></h3>
+<p><a class="reference external" href="https://cyberbotics.com/">Webots</a> [<a class="reference external" href="https://github.com/cyberbotics/webots">repo</a>] is an open-source, cross-platform robot programming and simulation environment offering “accurate physics” and a range of robot models.</p>
+<p>Simulators can be complex, although running them can requier a lot of compute resource and crash your computer if note available.</p>
+<p><img alt="Webots desktop complex world" src="_images/webots2.png" /></p>
+<p>Lots of other simulations are also provided, including quite simple ones.</p>
+<p><img alt="Webots desktop simple world" src="_images/webots3.png" /></p>
+<p>Several langauages are supported  — C, Python, Java, as well as ROS (though the latter make take some setting up on Windows?).</p>
+<p><img alt="Webots lanuages - py example" src="Webots_langs.png" /></p>
+<p>Webots is also available via an online simulator published via the <a class="reference external" href="https://robotbenchmark.net/">robotbenchmark</a> robot challenge website. (Similar environments <a class="reference external" href="https://www.cyberbotics.com/doc/guide/web-simulation#description">can be self-hosted</a>.</p>
+<p>Challenge tasks can be attempted without logging in, or a personal account can be created and then used to enter challenges competitively.</p>
+<p><img alt="Robotbenchmark / webots online competition and simulation server" src="_images/robotbenchmark.png" /></p>
+<p>The online / web-streamed robotbenchmark environment provides a browser based environment giving the simulator view, a pop-up information box defining the task at hand and providing limitied instruction, a terminal view and a simple text editor that can be used to add programmatic control to the corresponding simulated robot.</p>
+<p><img alt="Robotbenchmark / webots online browser based desktop" src="_images/robotbenchmark2.png" /></p>
+<p>A wide range of pre-defined challenges are available on the Robotbenchmark website.</p>
+<p>It also looks like it <a class="reference external" href="https://cyberbotics.com/doc/guide/interfacing-webots-to-third-party-software-with-tcp-ip">should be possible</a> to control a robot in a Webots simulation from a Jupyter notebook [<a class="reference external" href="https://www.youtube.com/watch?v=Vj936RLW-KY">early example?</a>].</p>
+<p>Documentation examples show how Webots can be controlled from <a class="reference external" href="https://cyberbotics.com/doc/guide/using-visual-studio-with-webots">VSCode (C/C++)</a> and <a class="reference external" href="https://cyberbotics.com/doc/guide/using-pycharm-with-webots">PyCharm (python</a>. The VSCode Python extension now supports Jupyter notebooks, so it would be interesting to explore controlling the Webots simulator from a notebook in VSCode. The PyCharm example might also provide clues as to how to get started controlling Webots from a Jupyter notebook directly. Might a Webots Jupyter kernel also make sense, based either on a Python kernel, or a C kernel?</p>
+<p><strong>Advantages:</strong> cross platfrom simulator with a wide range of simulated robot models and world components. Robots can be rpogrammed using a variety of languages, including Python. A streaming web-based environment is available, although the UI differs from the desktop one.</p>
+<p><strong>Disadvantages:</strong> Complex simulations can clobber your machine.</p>
+<p><strong>To explore:</strong> how easy is it to set up the web streaming server? How easy is is to create custom challenges within it? Is a similar inrstruction / information box available in the desktop application?</p>
+</div>
+<div class="section" id="v-rep">
+<h3>V-REP<a class="headerlink" href="#v-rep" title="Permalink to this headline">¶</a></h3>
+<p>V-REP is a fully featured, cross-platform 3D simulator developed by Coppelia Robotics.</p>
+<p>The VREP simulator comes with a wide range of simulated robot models, from mobile robots to robot arms. A Baxter robot model is also available.</p>
+<p>Simulated robots can be programmed natively within the VREP environment using Lua scripts. However, a Python API is also available which allows robots to be scripted using Python code. A ROS interface for programming VREP simulated robots using ROS is also available [although I haven’t tried it…]</p>
+<p>A set of example materials were produced as part of a previous TM129 update scoping activity and can be found here: <a class="reference external" href="https://github.com/psychemedia/ou-robotics-vrep/tree/master/robotVM"><code class="docutils literal notranslate"><span class="pre">ou-robotics-vrep</span></code></a>. A VirtualBox virtual machine demo is also available.</p>
+<p>In the <code class="docutils literal notranslate"><span class="pre">ou-robotics-vrep</span></code> demo, the simulator is packaged along with a Jupyter notebook server inside a Virtualbox virtual machine. The simulator runs on the VM desktop and controlled via Python programs running inside Jupyer notebooks, access via a browser on host.</p>
+<p><img alt="VREP notebook &amp; VM desktop" src="_images/vrep_demo1.png" /></p>
+<p>THe VREP simulator can be instrumented within a world scene, or via code. Real time telemetry charts live logged showing sensor readings can be displayed in-world.</p>
+<p><img alt="VREP telementry view" src="_images/vrep-graph.png" /></p>
+<p>Telemetry data can also be captured into a Jupyter notebook used to control the simulator and and robot operating within it.</p>
+<p><img alt="Viewing VREP telemetry data in a Jupyer notebook" src="_images/demo_-_vrep_magic2.png" /></p>
+<p>Further context is available in a series of blog posts produced at the time, for example <a class="reference external" href="https://blog.ouseful.info/2017/09/10/distributing-virtual-machines-that-include-a-virtual-desktop-to-students-v-rep-jupyter-notebooks/">here</a>, <a class="reference external" href="https://blog.ouseful.info/2017/10/03/ipython-magic-for-v-rep-robot-simulator/">here</a> and <a class="reference external" href="https://blog.ouseful.info/2017/10/03/first-attempt-at-using-ipywidgets-in-jupyter-notebooks-to-display-v-rep-robot-simulator-telemetry/">here</a>.</p>
+<p><strong>Advantages</strong>: VREP is a fully featured simulator offering a wide range of robot models. A Python API, as well as a ROS interface, are available.</p>
+<p><strong>Disadvantages</strong>: VREP can be resource hungry and the installation path can be tricky, particular if the programming environment needs to be interfaced with it; this can be simplified by distributing the whole environment via a virtual machine, although performance of the vitualised simulator compared to running it as a native host desktop application may be impaired. <em>[I don’t remember if I tried to run it on a powerful server access via RDP? If using RDP, the notebook server could be accessed via a browser installed on the virtual desktop, or as a headless service exposed via another http port.]</em></p>
+</div>
+<div class="section" id="ros">
+<h3>ROS<a class="headerlink" href="#ros" title="Permalink to this headline">¶</a></h3>
+<p><a class="reference external" href="https://www.ros.org/"><em>ROS</em>, the <em>R</em>obot <em>O</em>perating <em>S</em>ystem</a>, is widely used for controlling a wide range of research (and industry?) robot platforms. It offers a native Python API.</p>
+<p><em>[I have not tested any ROS tools mentioned here unless otherwise stated.]</em></p>
+<p>ROS is part of an ecosystem of tools including the ROS programming APIs and the <a class="reference external" href="http://gazebosim.org/">Gazebo</a> robot simulator. Gazebo also has a web client, <a class="reference external" href="http://gazebosim.org/gzweb.html">Gzweb (gz3d)</a>. Several 2D simulators are also available including the official <a class="reference external" href="http://wiki.ros.org/stdr_simulator">STDR (simple two dimensional robot?) simulator</a> and the community provided <a class="reference external" href="https://github.com/avidbots/flatland"><code class="docutils literal notranslate"><span class="pre">flatland</span></code></a>.</p>
+<p><img alt="View into VM running ROS and STDR" src="_images/ros_ubuntu_2d_sim.png" /></p>
+<p>ROS APIs are also supported by other simulators including V-REP and Webots.</p>
+<p><a class="reference external" href="http://wiki.ros.org/rviz">RViz</a> and the recently released <a class="reference external" href="https://webviz.io/">webviz</a> provide support for visualising ROS robot sensor data via a desktop client and the browser respectively.</p>
+<p><a class="reference external" href="https://github.com/RoboStack/jupyter-ros"><code class="docutils literal notranslate"><span class="pre">jupyter-ros</span></code></a> is a relatively recent JupyterLab extension, currently under development, that aims to provide a range of interactive widgets for visualising ROS environments and robot data. <em>(I wonder if it will integrate <code class="docutils literal notranslate"><span class="pre">webviz</span></code> at some point?)</em></p>
+<p>Despite being under active development for several years, getting a working ROS environment up and running on a cross-platform basis still seems to be a difficult undertaking.</p>
+<p>The simplest approach would be via a Docker or Virtualbox distribution (I thought I had a Vagrantfile somewhere for building a Virtualbox image, but can’t seem to find it :-(</p>
+<p>The image sizes can be <strong>very large</strong> (several GB download) and I assume that resource requirements for running ROS and the Gazebo simulator are such that OU min spec machines might struggle.</p>
+<p>An example environment showing integrated contrpl of a Gzweb simulated robot using code running in a Jupyter notebook can be found via the public simulation sandbox for Shadow’s Smart Grasping System <a class="reference external" href="https://github.com/shadow-robot/smart_grasping_sandbox"><code class="docutils literal notranslate"><span class="pre">smart_grasping_sandbox</span></code></a>. With docker installed, run:</p>
+<p><code class="docutils literal notranslate"><span class="pre">docker</span> <span class="pre">run</span> <span class="pre">-it</span> <span class="pre">--rm</span> <span class="pre">--name</span> <span class="pre">sgsdemo</span> <span class="pre">-p</span> <span class="pre">8080:8080</span> <span class="pre">-p</span> <span class="pre">8081:8888</span> <span class="pre">-p</span> <span class="pre">7681:7681</span> <span class="pre">shadowrobot/</span></code></p>
+<p><img alt="Example of Gzweb and Jupyter notebook via smart-grasping-sandbox container" src="_images/Smart_Grasping_Sandbox.png" /></p>
+<p>The Jupyter notebook is served on <code class="docutils literal notranslate"><span class="pre">localhost:8081</span></code> and Gzweb on <code class="docutils literal notranslate"><span class="pre">localhost:8080</span></code>. (A <em>cloud9</em> editor can also be exposed, mapped from port 8181 inside the container; this could be removed from the image to reduce image size. I donlt recall offhabd what port 7681 was and donlt fancy waiting for the 6+GB image to download again…)</p>
+<p>A simpler, much lighter approach, without the Gazebo/Gzweb simulator is taken in <a class="reference external" href="https://github.com/RobInLabUJI/ROS-Tutorials">RobInLabUJI/ROS-Tutorials</a>, a set of simple tutorials for getting started with ROS using a 2D simulated turtle. You can try it out here: <a class="reference external" href="https://mybinder.org/v2/gh/RobInLabUJI/ROS-Tutorials/master?urlpath=lab"><img alt="Binder" src="https://mybinder.org/badge_logo.svg" /></a></p>
+<p><img alt="ROS Turtlesim in binder notebook demo" src="_images/RobInLabUJI_ROS-Tutorials.png" /></p>
+<p>It runs okay in Binder, which is akin to an OU min spec machine, so that’s a possibility. [I got <code class="docutils literal notranslate"><span class="pre">jupyter-ros</span></code> to install though couldn’t build the labexetension (no nodejs), which is I’m guessing why I could load the package but not see any <code class="docutils literal notranslate"><span class="pre">ros3d</span></code> widgets?]</p>
+<p>See also their mininal <a class="reference external" href="https://github.com/RobInLabUJI/ROS-Online">ROSOnline</a> (runs in Binder) demo.  A tool for creating custom Dockerfiles for building ROS environments is <a class="reference external" href="https://github.com/RobInLabUJI/ROSLab">also available</a>.</p>
+<p>The same group also appear to have a set of demos that include using notebooks to control Webots simulations using ROS: <a class="reference external" href="https://github.com/RobInLabUJI/try-a-bot/">try-a-bot</a>, from eg this set-up: <a class="reference external" href="https://github.com/RobInLabUJI/try-a-bot/blob/master/try-a-pioneer/launch">example</a>]. Frustratingly, there doesn’t look to be the setup for a Docker container or virtual machine image?</p>
+<p>There looks to be a simple Gzweb container here: <a class="reference external" href="https://github.com/DukeRobotics/gzweb-rosssh">DukeRobotics/gzweb-rosssh</a>. It might be worth forking the <code class="docutils literal notranslate"><span class="pre">RobInLabUJI/ROS-Tutorials</span></code> repo to see if we could add in Gazebo/Gzweb and then connect to and control a scene in it?</p>
+<p>Poking around a bit more, this container — <a class="reference external" href="https://github.com/devrt/ros-devcontainer-vscode">devrt/ros-devcontainer-vscode</a> — seems to include ROS and Gazebo/Gzweb. VSCode can be connected to the container, or a provided <code class="docutils literal notranslate"><span class="pre">docker-compose</span></code> script will launch the ROS container and an appropriately configured and connected browser based Theia editor.</p>
+<p>Another, more advanced set of examples can be found via this <a class="reference external" href="https://github.com/carlosjoserg/rosdev_talk_2019/">ROSDev 2019 presentation</a> describing a couple of simulated robots playing chess. A more complete statement of the exercise can be found <a class="reference external" href="https://sir.upc.edu/projects/rostutorials/final_work/index.html">here</a> and I think this may be the <a class="reference external" href="https://bitbucket.org/janrosell/ros1819-final-project/src/master/">associated repo</a>.</p>
+<p><strong>Advantages</strong>: robot researchers seem to like ROS; it’s Python; a 2D sim and ROS server can run in a notebook on MyBinder.</p>
+<p><strong>Disadvantages</strong>: lots of the demos are huge, and either broken or seem require mad sysdev skills to get working. The current on-ramp is appalling, although <code class="docutils literal notranslate"><span class="pre">RobInLabUJI/ROS-Tutorials</span></code> is quite a gentle way in. The ROS architecture takes a certain amount of explaining, which may get in the way of teaching elementary programming unless we add a lot of magic support (which also means identifying some sensible magic to create).</p>
+</div>
+<div class="section" id="robot-development-studio">
+<h3>Robot Development Studio<a class="headerlink" href="#robot-development-studio" title="Permalink to this headline">¶</a></h3>
+<p>The  <a class="reference external" href="https://www.theconstructsim.com/rds-ros-development-studio/">ROS Robot Development Studio (RDS)</a> is an online educational environment for running Jupyter notebook programmed ROS based simulations visualised using Gzweb. A free plan offers several simple tutorials with minimal compute resource with an upsell business model that allows regsitered users to enable more resource (more processor memory and processor cores, or GPUs for example.</p>
+<p>Creating a project allows you to select a Linux O/S and version of Gazebo and a container is launched on that basis:</p>
+<p><img alt="ROS RDS project initialisation" src="_images/RDS_-_ROS_Development_Studio.png" /></p>
+<p>You can construct a simulation from a set of predefined worlds and robot models:</p>
+<p><img alt="ROS simulation construction from world and robot" src="_images/RDS_-_ROS_Development_Studio2.png" /></p>
+<p>The development environment itself is a browser based desktop / workbench within which you can view the simulator, a Jupyter notebook, an IDE (which didnlt load for me) and a terminal:</p>
+<p><img alt="ROD RDS simulatot and environment view" src="_images/RDS_-_ROS_Development_Studio4.png" /></p>
+<p>On the free plan, having the simulator window open pretty much clobbered everything for me.</p>
+<p><img alt="ROS RDS resource warning" src="_images/RDS_-_ROS_Development_Studio3.png" /></p>
+<p><strong>Advantages</strong>: the web based environment provides a range of integrated tools that can be used to programme a simulated robot. Coneectors are available so that you can run programmes within the environment against you own, network connected real robots.</p>
+<p><strong>Disadvantages</strong>: didn’t work for me under the free plan; not open source so no immediate way of running a self-hosted version free of any license fee, if at all.</p>
+</div>
+<div class="section" id="simple-hexapod-simulator">
+<h3>Simple Hexapod Simulator<a class="headerlink" href="#simple-hexapod-simulator" title="Permalink to this headline">¶</a></h3>
+<p>Hexapod simulator, viewed in browser via plotly dash, py/numpy on the back end: play with joint angles etc…</p>
+<p><a class="reference external" href="https://github.com/mithi/hexapod-robot-simulator"><code class="docutils literal notranslate"><span class="pre">mithi/hexapod-robot-simulator</span></code></a></p>
+</div>
+<div class="section" id="simple-robot-arm-demos">
+<h3>Simple Robot Arm Demos<a class="headerlink" href="#simple-robot-arm-demos" title="Permalink to this headline">¶</a></h3>
+<p>A very simple js / browser based demo of setting robot arm joint angles can be found at <a class="reference external" href="https://github.com/jaekookang/robot-arm-simple"><code class="docutils literal notranslate"><span class="pre">jaekookang/robot-arm-simple</span></code></a>. A much richer arm simulator using <em>three.js</em> is available at <a class="reference external" href="https://github.com/glumb/robot-gui">glumb/robot-gui</a> [<a class="reference external" href="http://robot.glumb.de/">demo</a> and <a class="reference external" href="https://www.youtube.com/watch?v=c2uEWyo6dc4">video</a>].</p>
+</div>
+</div>
+<div class="section" id="gym-toolkit">
+<h2><code class="docutils literal notranslate"><span class="pre">Gym</span></code> Toolkit<a class="headerlink" href="#gym-toolkit" title="Permalink to this headline">¶</a></h2>
+<p><a class="reference external" href="https://gym.openai.com/"><code class="docutils literal notranslate"><span class="pre">Gym</span></code></a> <em>“is a toolkit for developing and comparing reinforcement learning algorithms”</em>. It includes several <a class="reference external" href="https://gym.openai.com/envs/#robotics">robot simulations</a> that frame different reinforcement learning challenges, including a pick and place task and a robot hand manipulation task.</p>
+<p>A Masters project <a class="reference external" href="https://github.com/Iqra350/krock2_traversability/blob/master/core/Simulation.ipynb">notebook</a> seems to offer Gym like activities using a Webots environment (maybe?!)? The environmental set-up can be found <a class="reference external" href="https://github.com/Iqra350/krock2_traversability/tree/master/core">here</a> <em>[I haven’t tried this yet]</em>. This is related: <a class="reference external" href="https://github.com/romarcg/krock-sim">krock docker</a>.</p>
+</div>
+<div class="section" id="customising-forking-a-current-environment-or-creating-a-new-bespoke-one">
+<h2>Customising / Forking a Current Environment or Creating a New Bespoke One<a class="headerlink" href="#customising-forking-a-current-environment-or-creating-a-new-bespoke-one" title="Permalink to this headline">¶</a></h2>
+<p>An earlier attempt at updating TM129 robotics module commissioned the development of a webservice mediated application with a UI resembling the original RobotLab UI, although I donlt believe this was delivered.</p>
+<p>BlockPy does not embed an animated stage canvas (unlike Scratch / OU Build) but it does provide a canvas for display statistical charts. (The motivation for BlockPy programmes is data analysis rather than animation.) Extending BlockPy to include an animaation stage / simulator would open up the possibility of using an editro that could toggle between blocks and Python code input and accepts edits made under either view. The underplying BlockPy parser may need extending to support robot sensor and motor control commands, etc.</p>
+<p>It may be worth exploring the extent to which BlockMirror could be used to generate code that could be used to control a simulator component decoupled from one of the other packages.</p>
+</div>
+<div class="section" id="commercial-platforms">
+<h2>Commercial Platforms<a class="headerlink" href="#commercial-platforms" title="Permalink to this headline">¶</a></h2>
+<p><em>ABB Robotics</em> have a simulation environment for their robot platform, but the free trial plan seems limited to 30 days: <a class="reference external" href="https://new.abb.com/products/robotics/robotstudio">ABB Robot Studio</a>.</p>
+<p>Universal Robots offer a download for <a class="reference external" href="https://www.universal-robots.com/download/?option=18940">URSim</a>, a Linux based simulator that could be run via a virtual machine. <em>[I haven’t tried this yet. A possibly useful Docker container running the simulator behind a Guacamole server offering an browser based UI, as well as support for RDP, is defined here: <a class="reference external" href="https://github.com/ahobsonsayers/DockURSim">ahobsonsayers/DockURSim</a>. A possibly useful install script can be found <a class="reference external" href="https://gist.github.com/kmpm/35f77936c2bd05eb78d442668ded3f7f">here</a>; I havenlt found a Vagrantfile yet…]</em></p>
+</div>
+<div class="section" id="commerical-educational-platforms">
+<h2>Commerical Educational Platforms<a class="headerlink" href="#commerical-educational-platforms" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="https://www.miro-e.com/robot">MiRo</a> - commercial, no free demo, not open source.</p></li>
+</ul>
+</div>
+<div class="section" id="neural-replacement">
+<h2>neural  replacement<a class="headerlink" href="#neural-replacement" title="Permalink to this headline">¶</a></h2>
+<p>We also need a replacement for <code class="docutils literal notranslate"><span class="pre">Neural.exe</span></code></p>
+<ul class="simple">
+<li><p>Doug Blank again offers perhaps the best bet? https://github.com/Calysto/conx-notebooks https://conx.readthedocs.io/en/latest/</p></li>
+</ul>
+</div>
+</div>
+
+
+          </div>
+              <div class="related bottom">
+                &nbsp;
+  <nav id="rellinks">
+    <ul>
+        <li>
+          &larr;
+          <a href="index.html" title="Previous document">Robot Simulators Review</a>
+        </li>
+    </ul>
+  </nav>
+              </div>
+          
+        </div>
+      </div>
+    <div class="clearer"></div>
+  </div>
+    <div class="footer">
+      &copy;2019, The Open University.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 3.0.2</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="_sources/RobotSimulators.md"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>
